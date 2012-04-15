@@ -1,0 +1,17 @@
+<div class="file_upload">
+  <% if @uploader %>
+    <ul>
+      <% for err in @uploader.errors %>
+        <li><%= err %> </li>
+      <% end  %>
+    </ul>
+  <% end %>
+  <% form_for :upload , :url=>parse_uploads_path , :html=>{:multipart=>true} do %>
+    <h1>Upload file</h1>
+    <p>
+      <label>Select File </label> <%= file_field_tag :contacts %>
+      <span>Note: Only CSV or XLS file upload is supported</span>
+    </p>
+    <p> <%= submit_tag "Upload" %> </p>
+  <% end  %>
+</div>

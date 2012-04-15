@@ -1,0 +1,3 @@
+:file_upload:
+   :extentions: 'xls xlsx csv'
+   :not_supported_columns: 'id'

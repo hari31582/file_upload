@@ -1,0 +1,1 @@
+ApplicationConfiguration.new("#{RAILS_ROOT}/config/application.yml")

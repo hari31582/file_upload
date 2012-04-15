@@ -1,0 +1,23 @@
+<div class="file_upload">
+  <h1>Upload Contacts</h1>
+  <%form_for :upload , :url=>uploads_path do %>
+  <p><label>Email</label><%= select_tag "contacts[:email]",options_for_select(@columns)  %> </p>
+  <p><label>Title</label><%= select_tag "contacts[:title]", options_for_select(@columns) %> </p>
+  <p><label>Address</label><%= select_tag "contacts[:address]", options_for_select(@columns) %> </p>
+  <p><label>City</label><%= select_tag "contacts[:city]", options_for_select(@columns) %> </p>
+  <p><label>State</label><%= select_tag "contacts[:state]", options_for_select(@columns) %> </p>
+  <p><label>zip</label><%= select_tag "contacts[:zip]", options_for_select(@columns) %> </p>
+  <p><label>Country</label><%= select_tag "contacts[:country]", options_for_select(@columns) %> </p>
+  <p><label>Phone</label><%= select_tag "contacts[:phone]", options_for_select(@columns) %> </p>
+  <p><label>Website</label><%= select_tag "contacts[:website]", options_for_select(@columns) %> </p>
+  <p><label>Company Phone</label><%= select_tag "contacts[:company_phone]", options_for_select(@columns) %> </p>
+  <p><label>Company Fax</label><%= select_tag "contacts[:company_fax]", options_for_select(@columns) %> </p>
+  <p><label>Company Website</label><%= select_tag "contacts[:company_website]", options_for_select(@columns) %> </p>
+  <p><label>Company Revenue</label><%= select_tag "contacts[:company_revenue]", options_for_select(@columns) %> </p>
+  <p><label>Company Employees</label><%= select_tag "contacts[:company_employees]", options_for_select(@columns) %> </p>
+  <p><label>Company Industry</label><%= select_tag "contacts[:company_industry]", options_for_select(@columns) %> </p>
+  <p><label>Company Size</label><%= select_tag "contacts[:company_size]", options_for_select(@columns) %> </p>
+
+  <p><%= submit_tag "Upload Contacts" %> <%= button_to "Cancel" , :onclick=>"history:back();"%> </p>
+ <% end %>
+</div>
