@@ -1,5 +1,6 @@
 # This class has responsibility to parse file and validate uploaded file
 require 'fastercsv'
+require 'roo'
 class FileUpload
 
   attr_accessor :errors , :columns , :file , :new_filename
@@ -52,13 +53,23 @@ class FileUpload
 
   def parse_csv_file
     @columns = FasterCSV.parse(@file).first
-    p "Columns"
-    p @columns
-   
   end
 
   def parse_xls_file
-    @columns << 'id'
+    
+    
+
+    excel = Excelx.new(@file.path,nil,:ignore)
+
+    excel.default_sheet = excel.sheets.first
+     excel.first_column
+    for cell_num in excel.first_column..excel.last_column
+      @columns << excel.cell(excel.first_row,cell_num)
+    end
+
+    p "Excel columns"
+    p @columns
+    
   end
 
 end

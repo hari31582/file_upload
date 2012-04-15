@@ -3250,3 +3250,433 @@ Completed in 150ms (View: 13, DB: 6) | 200 OK [http://localhost/uploads]
   [4;35;1mSQL (1.0ms)[0m   [0mCOMMIT[0m
 * [JOB] FileUploadJob completed after 0.6560
 1 jobs processed at 1.5037 j/s, 0 failed ...
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UploadsController#parse (for 127.0.0.1 at 2012-04-15 22:58:36) [POST]
+  Parameters: {"authenticity_token"=>"piSYHU/0f0JeFrk5BsERqP74XDoY66UxTPbV22O7t0c=", "contacts"=>#<File:C:/Users/HARIBH~1/AppData/Local/Temp/RackMultipart20120415-9016-171af7b-0>, "commit"=>"Upload"}
+
+TypeError (C:/Users/HARIBH~1/AppData/Local/Temp/RackMultipart20120415-9016-171af7b-0 is not an Excel file):
+  roo (1.10.1) lib/roo/generic_spreadsheet.rb:491:in `file_type_check'
+  roo (1.10.1) lib/roo/excel.rb:103:in `initialize'
+  app/models/file_upload.rb:59:in `new'
+  app/models/file_upload.rb:59:in `parse_xls_file'
+  app/models/file_upload.rb:41:in `valid?'
+  app/models/file_upload.rb:16:in `parse'
+  app/controllers/uploads_controller.rb:7:in `parse'
+  c:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (35.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing UploadsController#parse (for 127.0.0.1 at 2012-04-15 23:00:53) [POST]
+  Parameters: {"authenticity_token"=>"piSYHU/0f0JeFrk5BsERqP74XDoY66UxTPbV22O7t0c=", "contacts"=>#<File:C:/Users/HARIBH~1/AppData/Local/Temp/RackMultipart20120415-9016-10irmf5-0>, "commit"=>"Upload"}
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of ActiveRecord::Base.
+The error occurred while evaluating nil.[]):
+  app/models/file_upload.rb:32:in `valid?'
+  app/models/file_upload.rb:16:in `parse'
+  app/controllers/uploads_controller.rb:7:in `parse'
+  c:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (33.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UploadsController#parse (for 127.0.0.1 at 2012-04-15 23:01:25) [POST]
+  Parameters: {"authenticity_token"=>"piSYHU/0f0JeFrk5BsERqP74XDoY66UxTPbV22O7t0c=", "contacts"=>#<File:C:/Users/HARIBH~1/AppData/Local/Temp/RackMultipart20120415-9016-1qqet4b-0>, "commit"=>"Upload"}
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of ActiveRecord::Base.
+The error occurred while evaluating nil.[]):
+  app/models/file_upload.rb:32:in `valid?'
+  app/models/file_upload.rb:16:in `parse'
+  app/controllers/uploads_controller.rb:7:in `parse'
+  c:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (134.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UploadsController#parse (for 127.0.0.1 at 2012-04-15 23:02:29) [POST]
+  Parameters: {"commit"=>"Upload", "contacts"=>#<File:C:/Users/HARIBH~1/AppData/Local/Temp/RackMultipart20120415-6420-z399mo-0>, "authenticity_token"=>"piSYHU/0f0JeFrk5BsERqP74XDoY66UxTPbV22O7t0c="}
+
+TypeError (C:/Users/HARIBH~1/AppData/Local/Temp/RackMultipart20120415-6420-z399mo-0 is not an Excel file):
+  roo (1.10.1) lib/roo/generic_spreadsheet.rb:491:in `file_type_check'
+  roo (1.10.1) lib/roo/excel.rb:103:in `initialize'
+  app/models/file_upload.rb:59:in `new'
+  app/models/file_upload.rb:59:in `parse_xls_file'
+  app/models/file_upload.rb:41:in `valid?'
+  app/models/file_upload.rb:16:in `parse'
+  app/controllers/uploads_controller.rb:7:in `parse'
+  c:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (33.0ms)
+Rendered rescues/_request_and_response (2.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing UploadsController#parse (for 127.0.0.1 at 2012-04-15 23:06:03) [POST]
+  Parameters: {"commit"=>"Upload", "contacts"=>#<File:C:/Users/HARIBH~1/AppData/Local/Temp/RackMultipart20120415-6420-1b3wunw-0>, "authenticity_token"=>"piSYHU/0f0JeFrk5BsERqP74XDoY66UxTPbV22O7t0c="}
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of ActiveRecord::Base.
+The error occurred while evaluating nil.[]):
+  app/models/file_upload.rb:32:in `valid?'
+  app/models/file_upload.rb:16:in `parse'
+  app/controllers/uploads_controller.rb:7:in `parse'
+  c:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (33.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UploadsController#parse (for 127.0.0.1 at 2012-04-15 23:08:26) [POST]
+  Parameters: {"authenticity_token"=>"piSYHU/0f0JeFrk5BsERqP74XDoY66UxTPbV22O7t0c=", "contacts"=>#<File:C:/Users/HARIBH~1/AppData/Local/Temp/RackMultipart20120415-6056-1ml5cbo-0>, "commit"=>"Upload"}
+
+TypeError (can't convert Tempfile into String):
+  roo (1.10.1) lib/roo/generic_spreadsheet.rb:487:in `extname'
+  roo (1.10.1) lib/roo/generic_spreadsheet.rb:487:in `file_type_check'
+  roo (1.10.1) lib/roo/excel.rb:103:in `initialize'
+  app/models/file_upload.rb:59:in `new'
+  app/models/file_upload.rb:59:in `parse_xls_file'
+  app/models/file_upload.rb:41:in `valid?'
+  app/models/file_upload.rb:16:in `parse'
+  app/controllers/uploads_controller.rb:7:in `parse'
+  c:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (57.0ms)
+Rendered rescues/_request_and_response (2.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (1.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing UploadsController#parse (for 127.0.0.1 at 2012-04-15 23:14:00) [POST]
+  Parameters: {"authenticity_token"=>"piSYHU/0f0JeFrk5BsERqP74XDoY66UxTPbV22O7t0c=", "contacts"=>#<File:C:/Users/HARIBH~1/AppData/Local/Temp/RackMultipart20120415-6056-1k9k51l-0>, "commit"=>"Upload"}
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of ActiveRecord::Base.
+The error occurred while evaluating nil.[]):
+  app/models/file_upload.rb:32:in `valid?'
+  app/models/file_upload.rb:16:in `parse'
+  app/controllers/uploads_controller.rb:7:in `parse'
+  c:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (30.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UploadsController#parse (for 127.0.0.1 at 2012-04-15 23:15:21) [POST]
+  Parameters: {"contacts"=>#<File:C:/Users/HARIBH~1/AppData/Local/Temp/RackMultipart20120415-7304-9nvg96-0>, "authenticity_token"=>"piSYHU/0f0JeFrk5BsERqP74XDoY66UxTPbV22O7t0c=", "commit"=>"Upload"}
+
+TypeError (C:/haribhau_ingale/projects/file_upload/tmp/tmpfile20120415111539contacts.xls.xlsx is not an Excel file):
+  roo (1.10.1) lib/roo/generic_spreadsheet.rb:491:in `file_type_check'
+  roo (1.10.1) lib/roo/excel.rb:103:in `initialize'
+  app/models/file_upload.rb:64:in `new'
+  app/models/file_upload.rb:64:in `parse_xls_file'
+  app/models/file_upload.rb:41:in `valid?'
+  app/models/file_upload.rb:16:in `parse'
+  app/controllers/uploads_controller.rb:7:in `parse'
+  c:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (48.0ms)
+Rendered rescues/_request_and_response (2.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing UploadsController#parse (for 127.0.0.1 at 2012-04-15 23:16:55) [POST]
+  Parameters: {"contacts"=>#<File:C:/Users/HARIBH~1/AppData/Local/Temp/RackMultipart20120415-7304-heeslz-0>, "authenticity_token"=>"piSYHU/0f0JeFrk5BsERqP74XDoY66UxTPbV22O7t0c=", "commit"=>"Upload"}
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of ActiveRecord::Base.
+The error occurred while evaluating nil.[]):
+  app/models/file_upload.rb:32:in `valid?'
+  app/models/file_upload.rb:16:in `parse'
+  app/controllers/uploads_controller.rb:7:in `parse'
+  c:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (48.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UploadsController#parse (for 127.0.0.1 at 2012-04-15 23:17:48) [POST]
+  Parameters: {"commit"=>"Upload", "contacts"=>#<File:C:/Users/HARIBH~1/AppData/Local/Temp/RackMultipart20120415-2380-qgvqql-0>, "authenticity_token"=>"piSYHU/0f0JeFrk5BsERqP74XDoY66UxTPbV22O7t0c="}
+
+TypeError (C:/haribhau_ingale/projects/file_upload/tmp/tmpfile20120415111803contacts.xlsx is not an Excel file):
+  roo (1.10.1) lib/roo/generic_spreadsheet.rb:491:in `file_type_check'
+  roo (1.10.1) lib/roo/excel.rb:103:in `initialize'
+  app/models/file_upload.rb:64:in `new'
+  app/models/file_upload.rb:64:in `parse_xls_file'
+  app/models/file_upload.rb:41:in `valid?'
+  app/models/file_upload.rb:16:in `parse'
+  app/controllers/uploads_controller.rb:7:in `parse'
+  c:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (34.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (1.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing UploadsController#parse (for 127.0.0.1 at 2012-04-15 23:18:52) [POST]
+  Parameters: {"commit"=>"Upload", "contacts"=>#<File:C:/Users/HARIBH~1/AppData/Local/Temp/RackMultipart20120415-2380-19b9gr5-0>, "authenticity_token"=>"piSYHU/0f0JeFrk5BsERqP74XDoY66UxTPbV22O7t0c="}
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of ActiveRecord::Base.
+The error occurred while evaluating nil.[]):
+  app/models/file_upload.rb:32:in `valid?'
+  app/models/file_upload.rb:16:in `parse'
+  app/controllers/uploads_controller.rb:7:in `parse'
+  c:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (29.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UploadsController#parse (for 127.0.0.1 at 2012-04-15 23:19:39) [POST]
+  Parameters: {"commit"=>"Upload", "contacts"=>#<File:C:/Users/HARIBH~1/AppData/Local/Temp/RackMultipart20120415-8788-1w2judx-0>, "authenticity_token"=>"piSYHU/0f0JeFrk5BsERqP74XDoY66UxTPbV22O7t0c="}
+
+Ole::Storage::FormatError (broken allocationtable chain):
+  c:/Ruby187/lib/ruby/gems/1.8/gems/ruby-ole-1.2.11.3/lib/ole/storage/base.rb:474:in `chain'
+  c:/Ruby187/lib/ruby/gems/1.8/gems/ruby-ole-1.2.11.3/lib/ole/storage/base.rb:498:in `ranges'
+  c:/Ruby187/lib/ruby/gems/1.8/gems/ruby-ole-1.2.11.3/lib/ole/storage/base.rb:505:in `open'
+  c:/Ruby187/lib/ruby/gems/1.8/gems/ruby-ole-1.2.11.3/lib/ole/storage/base.rb:509:in `read'
+  c:/Ruby187/lib/ruby/gems/1.8/gems/ruby-ole-1.2.11.3/lib/ole/storage/base.rb:126:in `load'
+  c:/Ruby187/lib/ruby/gems/1.8/gems/ruby-ole-1.2.11.3/lib/ole/storage/base.rb:77:in `initialize'
+  c:/Ruby187/lib/ruby/gems/1.8/gems/ruby-ole-1.2.11.3/lib/ole/storage/base.rb:83:in `new'
+  c:/Ruby187/lib/ruby/gems/1.8/gems/ruby-ole-1.2.11.3/lib/ole/storage/base.rb:83:in `open'
+  spreadsheet (0.6.8) lib/spreadsheet/excel/reader.rb:1167:in `setup'
+  spreadsheet (0.6.8) lib/spreadsheet/excel/reader.rb:121:in `read'
+  spreadsheet (0.6.8) lib/spreadsheet/excel/workbook.rb:32:in `open'
+  spreadsheet (0.6.8) lib/spreadsheet.rb:62:in `open'
+  spreadsheet (0.6.8) lib/spreadsheet.rb:68:in `open'
+  roo (1.10.1) lib/roo/excel.rb:118:in `initialize'
+  app/models/file_upload.rb:64:in `new'
+  app/models/file_upload.rb:64:in `parse_xls_file'
+  app/models/file_upload.rb:41:in `valid?'
+  app/models/file_upload.rb:16:in `parse'
+  app/controllers/uploads_controller.rb:7:in `parse'
+  c:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (44.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing UploadsController#parse (for 127.0.0.1 at 2012-04-15 23:22:41) [POST]
+  Parameters: {"commit"=>"Upload", "contacts"=>#<File:C:/Users/HARIBH~1/AppData/Local/Temp/RackMultipart20120415-8788-5ssya5-0>, "authenticity_token"=>"piSYHU/0f0JeFrk5BsERqP74XDoY66UxTPbV22O7t0c="}
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of ActiveRecord::Base.
+The error occurred while evaluating nil.[]):
+  app/models/file_upload.rb:32:in `valid?'
+  app/models/file_upload.rb:16:in `parse'
+  app/controllers/uploads_controller.rb:7:in `parse'
+  c:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (27.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UploadsController#parse (for 127.0.0.1 at 2012-04-15 23:23:25) [POST]
+  Parameters: {"commit"=>"Upload", "authenticity_token"=>"piSYHU/0f0JeFrk5BsERqP74XDoY66UxTPbV22O7t0c=", "contacts"=>#<File:C:/Users/HARIBH~1/AppData/Local/Temp/RackMultipart20120415-8468-u392pf-0>}
+
+TypeError (can't convert Tempfile into String):
+  roo (1.10.1) lib/roo/generic_spreadsheet.rb:487:in `extname'
+  roo (1.10.1) lib/roo/generic_spreadsheet.rb:487:in `file_type_check'
+  roo (1.10.1) lib/roo/excelx.rb:91:in `initialize'
+  app/models/file_upload.rb:62:in `new'
+  app/models/file_upload.rb:62:in `parse_xls_file'
+  app/models/file_upload.rb:41:in `valid?'
+  app/models/file_upload.rb:16:in `parse'
+  app/controllers/uploads_controller.rb:7:in `parse'
+  c:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (34.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UploadsController#parse (for 127.0.0.1 at 2012-04-15 23:31:18) [POST]
+  Parameters: {"authenticity_token"=>"piSYHU/0f0JeFrk5BsERqP74XDoY66UxTPbV22O7t0c=", "contacts"=>#<File:C:/Users/HARIBH~1/AppData/Local/Temp/RackMultipart20120415-864-1tigs63-0>, "commit"=>"Upload"}
+Rendering template within layouts/application
+Rendering uploads/parse
+Completed in 15698ms (View: 23, DB: 0) | 200 OK [http://localhost/uploads/parse]
