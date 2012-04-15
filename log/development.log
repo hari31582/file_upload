@@ -2135,3 +2135,1118 @@ filename: tmpfile20120415082421ideas.csv
 Rendering template within layouts/application
 Rendering uploads/new
 Completed in 898ms (View: 17, DB: 25) | 200 OK [http://localhost/uploads]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UploadsController#index (for 127.0.0.1 at 2012-04-15 21:50:36) [GET]
+
+ActionController::UnknownAction (No action responded to index. Actions: create, new, and parse):
+  c:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing UploadsController#new (for 127.0.0.1 at 2012-04-15 21:50:42) [GET]
+Rendering template within layouts/application
+Rendering uploads/new
+Completed in 15ms (View: 13, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UploadsController#parse (for 127.0.0.1 at 2012-04-15 21:50:52) [POST]
+  Parameters: {"contacts"=>#<File:C:/Users/HARIBH~1/AppData/Local/Temp/RackMultipart20120415-4752-17k05dp-0>, "commit"=>"Upload", "authenticity_token"=>"piSYHU/0f0JeFrk5BsERqP74XDoY66UxTPbV22O7t0c="}
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of ActiveRecord::Base.
+The error occurred while evaluating nil.[]):
+  app/models/file_upload.rb:31:in `valid?'
+  app/models/file_upload.rb:15:in `parse'
+  app/controllers/uploads_controller.rb:7:in `parse'
+  c:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (33.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UploadsController#parse (for 127.0.0.1 at 2012-04-15 21:52:02) [POST]
+  Parameters: {"commit"=>"Upload", "authenticity_token"=>"piSYHU/0f0JeFrk5BsERqP74XDoY66UxTPbV22O7t0c=", "contacts"=>#<File:C:/Users/HARIBH~1/AppData/Local/Temp/RackMultipart20120415-5828-u1ufc5-0>}
+Rendering template within layouts/application
+Rendering uploads/parse
+Completed in 539ms (View: 32, DB: 2) | 200 OK [http://localhost/uploads/parse]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing UploadsController#create (for 127.0.0.1 at 2012-04-15 21:52:12) [POST]
+  Parameters: {"commit"=>"Upload Contacts", "authenticity_token"=>"piSYHU/0f0JeFrk5BsERqP74XDoY66UxTPbV22O7t0c=", "contacts"=>{":company_employees"=>"first_name", ":company_website"=>"first_name", ":website"=>"first_name", ":company_size"=>"first_name", ":zip"=>"first_name", ":email"=>"first_name", ":company_fax"=>"first_name", ":company_revenue"=>"first_name", ":company_phone"=>"first_name", ":city"=>"first_name", ":address"=>"first_name", ":phone"=>"first_name", ":country"=>"first_name", ":state"=>"first_name", ":title"=>"first_name", ":company_industry"=>"first_name"}}
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mINSERT INTO "delayed_jobs" ("updated_at", "attempts", "run_at", "locked_at", "locked_by", "handler", "failed_at", "last_error", "created_at", "priority") VALUES('2012-04-15 16:22:12.908915', 0, '2012-04-15 16:22:12.859912', NULL, NULL, '--- !ruby/object:FileUploadJob 
+column_mapping: !map:HashWithIndifferentAccess 
+ ":company_website": first_name
+ ":company_employees": first_name
+ ":website": first_name
+ ":email": first_name
+ ":zip": first_name
+ ":company_size": first_name
+ ":company_fax": first_name
+ ":company_revenue": first_name
+ ":address": first_name
+ ":city": first_name
+ ":company_phone": first_name
+ ":phone": first_name
+ ":state": first_name
+ ":country": first_name
+ ":title": first_name
+ ":company_industry": first_name
+filename: tmpfile20120415095203ideas.csv
+', NULL, NULL, '2012-04-15 16:22:12.908915', 0) RETURNING "id"[0m
+  [4;36;1mSQL (16.0ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering uploads/new
+Completed in 196ms (View: 22, DB: 20) | 200 OK [http://localhost/uploads]
+*** Starting job worker host:85MR3Q1 pid:1148
+* [JOB] aquiring lock on FileUploadJob
+  [4;36;1mDelayed::Job Update (3.0ms)[0m   [0;1mUPDATE "delayed_jobs" SET locked_at = '2012-04-15 16:27:12.735064', locked_by = 'host:85MR3Q1 pid:1148' WHERE (id = 6 and (locked_at is null or locked_at < '2012-04-15 12:27:12.735064')) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mDelayed::Job Update (0.0ms)[0m   [0;1mPG::Error: ERROR: value too long for type character varying(255)
+: UPDATE "delayed_jobs" SET "attempts" = 1, "last_error" = 'undefined method `header_row?'' for #<FileUploadJob:0x52c78c8>
+C:/haribhau_ingale/projects/file_upload/app/models/file_upload_job.rb:29:in `read_csv''
+c:/Ruby187/lib/ruby/gems/1.8/gems/fastercsv-1.5.4/lib/faster_csv.rb:696:in `each''
+c:/Ruby187/lib/ruby/gems/1.8/gems/fastercsv-1.5.4/lib/faster_csv.rb:696:in `each''
+C:/haribhau_ingale/projects/file_upload/app/models/file_upload_job.rb:28:in `read_csv''
+C:/haribhau_ingale/projects/file_upload/app/models/file_upload_job.rb:12:in `perform''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/job.rb:217:in `invoke_job''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/job.rb:92:in `run_with_lock''
+c:/Ruby187/lib/ruby/1.8/benchmark.rb:308:in `realtime''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/job.rb:91:in `run_with_lock''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/job.rb:155:in `reserve_and_run_one_job''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/job.rb:154:in `each''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/job.rb:154:in `reserve_and_run_one_job''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/job.rb:201:in `work_off''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/job.rb:200:in `times''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/job.rb:200:in `work_off''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/worker.rb:28:in `start''
+c:/Ruby187/lib/ruby/1.8/benchmark.rb:308:in `realtime''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/worker.rb:27:in `start''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/worker.rb:24:in `loop''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/worker.rb:24:in `start''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/tasks/tasks.rb:13
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/task.rb:205:in `call''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/task.rb:205:in `execute''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/task.rb:200:in `each''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/task.rb:200:in `execute''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/task.rb:158:in `invoke_with_call_chain''
+c:/Ruby187/lib/ruby/1.8/monitor.rb:242:in `synchronize''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/task.rb:151:in `invoke_with_call_chain''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/task.rb:144:in `invoke''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/application.rb:116:in `invoke_task''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/application.rb:94:in `top_level''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/application.rb:94:in `each''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/application.rb:94:in `top_level''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/application.rb:133:in `standard_exception_handling''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/application.rb:88:in `top_level''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/application.rb:66:in `run''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/application.rb:133:in `standard_exception_handling''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/application.rb:63:in `run''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/bin/rake:33
+c:/Ruby187/bin/rake:19:in `load''
+c:/Ruby187/bin/rake:19', "run_at" = '2012-04-15 16:27:17.820069', "updated_at" = '2012-04-15 16:27:12.823069' WHERE "id" = 6[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mDelayed::Job Update (2.0ms)[0m   [0;1mUPDATE "delayed_jobs" SET locked_by = null, locked_at = null WHERE (locked_by = 'host:85MR3Q1 pid:1148') [0m
+*** Starting job worker host:85MR3Q1 pid:788
+* [JOB] aquiring lock on FileUploadJob
+  [4;36;1mDelayed::Job Update (34.0ms)[0m   [0;1mUPDATE "delayed_jobs" SET locked_at = '2012-04-15 16:30:23.648984', locked_by = 'host:85MR3Q1 pid:788' WHERE (id = 6 and (locked_at is null or locked_at < '2012-04-15 12:30:23.648984')) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mDelayed::Job Update (0.0ms)[0m   [0;1mPG::Error: ERROR: value too long for type character varying(255)
+: UPDATE "delayed_jobs" SET "attempts" = 1, "last_error" = 'uninitialized constant FileUploadJob::Contact
+c:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:105:in `const_missing''
+C:/haribhau_ingale/projects/file_upload/app/models/file_upload_job.rb:34:in `read_csv''
+c:/Ruby187/lib/ruby/gems/1.8/gems/fastercsv-1.5.4/lib/faster_csv.rb:696:in `each''
+c:/Ruby187/lib/ruby/gems/1.8/gems/fastercsv-1.5.4/lib/faster_csv.rb:696:in `each''
+C:/haribhau_ingale/projects/file_upload/app/models/file_upload_job.rb:28:in `read_csv''
+C:/haribhau_ingale/projects/file_upload/app/models/file_upload_job.rb:12:in `perform''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/job.rb:217:in `invoke_job''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/job.rb:92:in `run_with_lock''
+c:/Ruby187/lib/ruby/1.8/benchmark.rb:308:in `realtime''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/job.rb:91:in `run_with_lock''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/job.rb:155:in `reserve_and_run_one_job''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/job.rb:154:in `each''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/job.rb:154:in `reserve_and_run_one_job''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/job.rb:201:in `work_off''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/job.rb:200:in `times''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/job.rb:200:in `work_off''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/worker.rb:28:in `start''
+c:/Ruby187/lib/ruby/1.8/benchmark.rb:308:in `realtime''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/worker.rb:27:in `start''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/worker.rb:24:in `loop''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/worker.rb:24:in `start''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/tasks/tasks.rb:13
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/task.rb:205:in `call''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/task.rb:205:in `execute''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/task.rb:200:in `each''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/task.rb:200:in `execute''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/task.rb:158:in `invoke_with_call_chain''
+c:/Ruby187/lib/ruby/1.8/monitor.rb:242:in `synchronize''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/task.rb:151:in `invoke_with_call_chain''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/task.rb:144:in `invoke''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/application.rb:116:in `invoke_task''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/application.rb:94:in `top_level''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/application.rb:94:in `each''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/application.rb:94:in `top_level''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/application.rb:133:in `standard_exception_handling''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/application.rb:88:in `top_level''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/application.rb:66:in `run''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/application.rb:133:in `standard_exception_handling''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/application.rb:63:in `run''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/bin/rake:33
+c:/Ruby187/bin/rake:19:in `load''
+c:/Ruby187/bin/rake:19', "run_at" = '2012-04-15 16:30:28.740989', "updated_at" = '2012-04-15 16:30:23.741989' WHERE "id" = 6[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mDelayed::Job Update (14.0ms)[0m   [0;1mUPDATE "delayed_jobs" SET locked_by = null, locked_at = null WHERE (locked_by = 'host:85MR3Q1 pid:788') [0m
+*** Starting job worker host:85MR3Q1 pid:6536
+* [JOB] aquiring lock on FileUploadJob
+  [4;36;1mDelayed::Job Update (33.0ms)[0m   [0;1mUPDATE "delayed_jobs" SET locked_at = '2012-04-15 16:33:32.778802', locked_by = 'host:85MR3Q1 pid:6536' WHERE (id = 7 and (locked_at is null or locked_at < '2012-04-15 12:33:32.778802')) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mDelayed::Job Update (0.0ms)[0m   [0;1mPG::Error: ERROR: value too long for type character varying(255)
+: UPDATE "delayed_jobs" SET "attempts" = 1, "last_error" = 'undefined method `to_sym'' for ["first_name", "Haribhau"]:Array
+C:/haribhau_ingale/projects/file_upload/app/models/file_upload_job.rb:39:in `read_csv''
+c:/Ruby187/lib/ruby/gems/1.8/gems/fastercsv-1.5.4/lib/faster_csv.rb:362:in `each''
+c:/Ruby187/lib/ruby/gems/1.8/gems/fastercsv-1.5.4/lib/faster_csv.rb:362:in `each''
+C:/haribhau_ingale/projects/file_upload/app/models/file_upload_job.rb:37:in `read_csv''
+c:/Ruby187/lib/ruby/gems/1.8/gems/fastercsv-1.5.4/lib/faster_csv.rb:696:in `each''
+c:/Ruby187/lib/ruby/gems/1.8/gems/fastercsv-1.5.4/lib/faster_csv.rb:696:in `each''
+C:/haribhau_ingale/projects/file_upload/app/models/file_upload_job.rb:28:in `read_csv''
+C:/haribhau_ingale/projects/file_upload/app/models/file_upload_job.rb:12:in `perform''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/job.rb:217:in `invoke_job''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/job.rb:92:in `run_with_lock''
+c:/Ruby187/lib/ruby/1.8/benchmark.rb:308:in `realtime''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/job.rb:91:in `run_with_lock''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/job.rb:155:in `reserve_and_run_one_job''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/job.rb:154:in `each''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/job.rb:154:in `reserve_and_run_one_job''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/job.rb:201:in `work_off''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/job.rb:200:in `times''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/job.rb:200:in `work_off''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/worker.rb:28:in `start''
+c:/Ruby187/lib/ruby/1.8/benchmark.rb:308:in `realtime''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/worker.rb:27:in `start''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/worker.rb:24:in `loop''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/worker.rb:24:in `start''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/tasks/tasks.rb:13
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/task.rb:205:in `call''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/task.rb:205:in `execute''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/task.rb:200:in `each''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/task.rb:200:in `execute''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/task.rb:158:in `invoke_with_call_chain''
+c:/Ruby187/lib/ruby/1.8/monitor.rb:242:in `synchronize''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/task.rb:151:in `invoke_with_call_chain''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/task.rb:144:in `invoke''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/application.rb:116:in `invoke_task''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/application.rb:94:in `top_level''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/application.rb:94:in `each''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/application.rb:94:in `top_level''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/application.rb:133:in `standard_exception_handling''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/application.rb:88:in `top_level''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/application.rb:66:in `run''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/application.rb:133:in `standard_exception_handling''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/application.rb:63:in `run''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/bin/rake:33
+c:/Ruby187/bin/rake:19:in `load''
+c:/Ruby187/bin/rake:19', "updated_at" = '2012-04-15 16:33:32.883808', "run_at" = '2012-04-15 16:33:37.881807' WHERE "id" = 7[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mDelayed::Job Update (1.0ms)[0m   [0;1mUPDATE "delayed_jobs" SET locked_by = null, locked_at = null WHERE (locked_by = 'host:85MR3Q1 pid:6536') [0m
+*** Starting job worker host:85MR3Q1 pid:4856
+* [JOB] aquiring lock on FileUploadJob
+  [4;36;1mDelayed::Job Update (1.0ms)[0m   [0;1mUPDATE "delayed_jobs" SET locked_at = '2012-04-15 16:34:55.252519', locked_by = 'host:85MR3Q1 pid:4856' WHERE (id = 6 and (locked_at is null or locked_at < '2012-04-15 12:34:55.252519')) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mDelayed::Job Update (0.0ms)[0m   [0;1mPG::Error: ERROR: value too long for type character varying(255)
+: UPDATE "delayed_jobs" SET "run_at" = '2012-04-15 16:35:00.310522', "updated_at" = '2012-04-15 16:34:55.312522', "last_error" = 'undefined method `to_sym'' for ["first_name", "Haribhau"]:Array
+C:/haribhau_ingale/projects/file_upload/app/models/file_upload_job.rb:39:in `read_csv''
+c:/Ruby187/lib/ruby/gems/1.8/gems/fastercsv-1.5.4/lib/faster_csv.rb:362:in `each''
+c:/Ruby187/lib/ruby/gems/1.8/gems/fastercsv-1.5.4/lib/faster_csv.rb:362:in `each''
+C:/haribhau_ingale/projects/file_upload/app/models/file_upload_job.rb:37:in `read_csv''
+c:/Ruby187/lib/ruby/gems/1.8/gems/fastercsv-1.5.4/lib/faster_csv.rb:696:in `each''
+c:/Ruby187/lib/ruby/gems/1.8/gems/fastercsv-1.5.4/lib/faster_csv.rb:696:in `each''
+C:/haribhau_ingale/projects/file_upload/app/models/file_upload_job.rb:28:in `read_csv''
+C:/haribhau_ingale/projects/file_upload/app/models/file_upload_job.rb:12:in `perform''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/job.rb:217:in `invoke_job''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/job.rb:92:in `run_with_lock''
+c:/Ruby187/lib/ruby/1.8/benchmark.rb:308:in `realtime''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/job.rb:91:in `run_with_lock''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/job.rb:155:in `reserve_and_run_one_job''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/job.rb:154:in `each''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/job.rb:154:in `reserve_and_run_one_job''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/job.rb:201:in `work_off''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/job.rb:200:in `times''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/job.rb:200:in `work_off''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/worker.rb:28:in `start''
+c:/Ruby187/lib/ruby/1.8/benchmark.rb:308:in `realtime''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/worker.rb:27:in `start''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/worker.rb:24:in `loop''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/worker.rb:24:in `start''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/tasks/tasks.rb:13
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/task.rb:205:in `call''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/task.rb:205:in `execute''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/task.rb:200:in `each''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/task.rb:200:in `execute''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/task.rb:158:in `invoke_with_call_chain''
+c:/Ruby187/lib/ruby/1.8/monitor.rb:242:in `synchronize''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/task.rb:151:in `invoke_with_call_chain''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/task.rb:144:in `invoke''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/application.rb:116:in `invoke_task''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/application.rb:94:in `top_level''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/application.rb:94:in `each''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/application.rb:94:in `top_level''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/application.rb:133:in `standard_exception_handling''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/application.rb:88:in `top_level''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/application.rb:66:in `run''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/application.rb:133:in `standard_exception_handling''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/application.rb:63:in `run''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/bin/rake:33
+c:/Ruby187/bin/rake:19:in `load''
+c:/Ruby187/bin/rake:19', "attempts" = 1 WHERE "id" = 6[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mDelayed::Job Update (0.0ms)[0m   [0;1mUPDATE "delayed_jobs" SET locked_by = null, locked_at = null WHERE (locked_by = 'host:85MR3Q1 pid:4856') [0m
+*** Starting job worker host:85MR3Q1 pid:7632
+* [JOB] aquiring lock on FileUploadJob
+  [4;36;1mDelayed::Job Update (29.0ms)[0m   [0;1mUPDATE "delayed_jobs" SET locked_at = '2012-04-15 16:38:47.002774', locked_by = 'host:85MR3Q1 pid:7632' WHERE (id = 6 and (locked_at is null or locked_at < '2012-04-15 12:38:47.002774')) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mDelayed::Job Update (0.0ms)[0m   [0;1mPG::Error: ERROR: value too long for type character varying(255)
+: UPDATE "delayed_jobs" SET "last_error" = 'undefined method `to_sym'' for ["first_name", "Haribhau"]:Array
+C:/haribhau_ingale/projects/file_upload/app/models/file_upload_job.rb:40:in `read_csv''
+c:/Ruby187/lib/ruby/gems/1.8/gems/fastercsv-1.5.4/lib/faster_csv.rb:362:in `each''
+c:/Ruby187/lib/ruby/gems/1.8/gems/fastercsv-1.5.4/lib/faster_csv.rb:362:in `each''
+C:/haribhau_ingale/projects/file_upload/app/models/file_upload_job.rb:38:in `read_csv''
+c:/Ruby187/lib/ruby/gems/1.8/gems/fastercsv-1.5.4/lib/faster_csv.rb:696:in `each''
+c:/Ruby187/lib/ruby/gems/1.8/gems/fastercsv-1.5.4/lib/faster_csv.rb:696:in `each''
+C:/haribhau_ingale/projects/file_upload/app/models/file_upload_job.rb:29:in `read_csv''
+C:/haribhau_ingale/projects/file_upload/app/models/file_upload_job.rb:12:in `perform''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/job.rb:217:in `invoke_job''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/job.rb:92:in `run_with_lock''
+c:/Ruby187/lib/ruby/1.8/benchmark.rb:308:in `realtime''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/job.rb:91:in `run_with_lock''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/job.rb:155:in `reserve_and_run_one_job''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/job.rb:154:in `each''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/job.rb:154:in `reserve_and_run_one_job''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/job.rb:201:in `work_off''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/job.rb:200:in `times''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/job.rb:200:in `work_off''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/worker.rb:28:in `start''
+c:/Ruby187/lib/ruby/1.8/benchmark.rb:308:in `realtime''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/worker.rb:27:in `start''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/worker.rb:24:in `loop''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/worker.rb:24:in `start''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/tasks/tasks.rb:13
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/task.rb:205:in `call''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/task.rb:205:in `execute''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/task.rb:200:in `each''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/task.rb:200:in `execute''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/task.rb:158:in `invoke_with_call_chain''
+c:/Ruby187/lib/ruby/1.8/monitor.rb:242:in `synchronize''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/task.rb:151:in `invoke_with_call_chain''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/task.rb:144:in `invoke''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/application.rb:116:in `invoke_task''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/application.rb:94:in `top_level''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/application.rb:94:in `each''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/application.rb:94:in `top_level''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/application.rb:133:in `standard_exception_handling''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/application.rb:88:in `top_level''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/application.rb:66:in `run''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/application.rb:133:in `standard_exception_handling''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/application.rb:63:in `run''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/bin/rake:33
+c:/Ruby187/bin/rake:19:in `load''
+c:/Ruby187/bin/rake:19', "updated_at" = '2012-04-15 16:38:47.108780', "attempts" = 1, "run_at" = '2012-04-15 16:38:52.107780' WHERE "id" = 6[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mDelayed::Job Update (1.0ms)[0m   [0;1mUPDATE "delayed_jobs" SET locked_by = null, locked_at = null WHERE (locked_by = 'host:85MR3Q1 pid:7632') [0m
+*** Starting job worker host:85MR3Q1 pid:6948
+* [JOB] aquiring lock on FileUploadJob
+  [4;36;1mDelayed::Job Update (2.0ms)[0m   [0;1mUPDATE "delayed_jobs" SET locked_at = '2012-04-15 16:40:12.142644', locked_by = 'host:85MR3Q1 pid:6948' WHERE (id = 6 and (locked_at is null or locked_at < '2012-04-15 12:40:12.142644')) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mDelayed::Job Update (0.0ms)[0m   [0;1mPG::Error: ERROR: value too long for type character varying(255)
+: UPDATE "delayed_jobs" SET "updated_at" = '2012-04-15 16:40:12.286652', "run_at" = '2012-04-15 16:40:17.284652', "last_error" = 'undefined method `to_sym'' for ["first_name", "Haribhau"]:Array
+C:/haribhau_ingale/projects/file_upload/app/models/file_upload_job.rb:40:in `read_csv''
+c:/Ruby187/lib/ruby/gems/1.8/gems/fastercsv-1.5.4/lib/faster_csv.rb:362:in `each''
+c:/Ruby187/lib/ruby/gems/1.8/gems/fastercsv-1.5.4/lib/faster_csv.rb:362:in `each''
+C:/haribhau_ingale/projects/file_upload/app/models/file_upload_job.rb:38:in `read_csv''
+c:/Ruby187/lib/ruby/gems/1.8/gems/fastercsv-1.5.4/lib/faster_csv.rb:696:in `each''
+c:/Ruby187/lib/ruby/gems/1.8/gems/fastercsv-1.5.4/lib/faster_csv.rb:696:in `each''
+C:/haribhau_ingale/projects/file_upload/app/models/file_upload_job.rb:29:in `read_csv''
+C:/haribhau_ingale/projects/file_upload/app/models/file_upload_job.rb:12:in `perform''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/job.rb:217:in `invoke_job''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/job.rb:92:in `run_with_lock''
+c:/Ruby187/lib/ruby/1.8/benchmark.rb:308:in `realtime''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/job.rb:91:in `run_with_lock''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/job.rb:155:in `reserve_and_run_one_job''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/job.rb:154:in `each''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/job.rb:154:in `reserve_and_run_one_job''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/job.rb:201:in `work_off''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/job.rb:200:in `times''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/job.rb:200:in `work_off''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/worker.rb:28:in `start''
+c:/Ruby187/lib/ruby/1.8/benchmark.rb:308:in `realtime''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/worker.rb:27:in `start''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/worker.rb:24:in `loop''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/worker.rb:24:in `start''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/tasks/tasks.rb:13
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/task.rb:205:in `call''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/task.rb:205:in `execute''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/task.rb:200:in `each''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/task.rb:200:in `execute''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/task.rb:158:in `invoke_with_call_chain''
+c:/Ruby187/lib/ruby/1.8/monitor.rb:242:in `synchronize''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/task.rb:151:in `invoke_with_call_chain''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/task.rb:144:in `invoke''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/application.rb:116:in `invoke_task''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/application.rb:94:in `top_level''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/application.rb:94:in `each''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/application.rb:94:in `top_level''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/application.rb:133:in `standard_exception_handling''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/application.rb:88:in `top_level''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/application.rb:66:in `run''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/application.rb:133:in `standard_exception_handling''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/application.rb:63:in `run''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/bin/rake:33
+c:/Ruby187/bin/rake:19:in `load''
+c:/Ruby187/bin/rake:19', "attempts" = 1 WHERE "id" = 6[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mDelayed::Job Update (1.0ms)[0m   [0;1mUPDATE "delayed_jobs" SET locked_by = null, locked_at = null WHERE (locked_by = 'host:85MR3Q1 pid:6948') [0m
+*** Starting job worker host:85MR3Q1 pid:2976
+* [JOB] aquiring lock on FileUploadJob
+  [4;36;1mDelayed::Job Update (2.0ms)[0m   [0;1mUPDATE "delayed_jobs" SET locked_at = '2012-04-15 16:41:06.585758', locked_by = 'host:85MR3Q1 pid:2976' WHERE (id = 7 and (locked_at is null or locked_at < '2012-04-15 12:41:06.585758')) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mDelayed::Job Update (0.0ms)[0m   [0;1mPG::Error: ERROR: value too long for type character varying(255)
+: UPDATE "delayed_jobs" SET "run_at" = '2012-04-15 16:41:11.667762', "attempts" = 1, "last_error" = 'undefined method `to_sym'' for ["first_name", "Haribhau"]:Array
+C:/haribhau_ingale/projects/file_upload/app/models/file_upload_job.rb:40:in `read_csv''
+c:/Ruby187/lib/ruby/gems/1.8/gems/fastercsv-1.5.4/lib/faster_csv.rb:362:in `each''
+c:/Ruby187/lib/ruby/gems/1.8/gems/fastercsv-1.5.4/lib/faster_csv.rb:362:in `each''
+C:/haribhau_ingale/projects/file_upload/app/models/file_upload_job.rb:38:in `read_csv''
+c:/Ruby187/lib/ruby/gems/1.8/gems/fastercsv-1.5.4/lib/faster_csv.rb:696:in `each''
+c:/Ruby187/lib/ruby/gems/1.8/gems/fastercsv-1.5.4/lib/faster_csv.rb:696:in `each''
+C:/haribhau_ingale/projects/file_upload/app/models/file_upload_job.rb:29:in `read_csv''
+C:/haribhau_ingale/projects/file_upload/app/models/file_upload_job.rb:12:in `perform''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/job.rb:217:in `invoke_job''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/job.rb:92:in `run_with_lock''
+c:/Ruby187/lib/ruby/1.8/benchmark.rb:308:in `realtime''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/job.rb:91:in `run_with_lock''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/job.rb:155:in `reserve_and_run_one_job''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/job.rb:154:in `each''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/job.rb:154:in `reserve_and_run_one_job''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/job.rb:201:in `work_off''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/job.rb:200:in `times''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/job.rb:200:in `work_off''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/worker.rb:28:in `start''
+c:/Ruby187/lib/ruby/1.8/benchmark.rb:308:in `realtime''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/worker.rb:27:in `start''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/worker.rb:24:in `loop''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/worker.rb:24:in `start''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/tasks/tasks.rb:13
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/task.rb:205:in `call''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/task.rb:205:in `execute''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/task.rb:200:in `each''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/task.rb:200:in `execute''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/task.rb:158:in `invoke_with_call_chain''
+c:/Ruby187/lib/ruby/1.8/monitor.rb:242:in `synchronize''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/task.rb:151:in `invoke_with_call_chain''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/task.rb:144:in `invoke''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/application.rb:116:in `invoke_task''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/application.rb:94:in `top_level''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/application.rb:94:in `each''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/application.rb:94:in `top_level''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/application.rb:133:in `standard_exception_handling''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/application.rb:88:in `top_level''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/application.rb:66:in `run''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/application.rb:133:in `standard_exception_handling''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/application.rb:63:in `run''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/bin/rake:33
+c:/Ruby187/bin/rake:19:in `load''
+c:/Ruby187/bin/rake:19', "updated_at" = '2012-04-15 16:41:06.668763' WHERE "id" = 7[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mDelayed::Job Update (0.0ms)[0m   [0;1mUPDATE "delayed_jobs" SET locked_by = null, locked_at = null WHERE (locked_by = 'host:85MR3Q1 pid:2976') [0m
+*** Starting job worker host:85MR3Q1 pid:6724
+* [JOB] aquiring lock on FileUploadJob
+  [4;36;1mDelayed::Job Update (2.0ms)[0m   [0;1mUPDATE "delayed_jobs" SET locked_at = '2012-04-15 16:41:50.769285', locked_by = 'host:85MR3Q1 pid:6724' WHERE (id = 6 and (locked_at is null or locked_at < '2012-04-15 12:41:50.769285')) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mDelayed::Job Update (0.0ms)[0m   [0;1mPG::Error: ERROR: value too long for type character varying(255)
+: UPDATE "delayed_jobs" SET "run_at" = '2012-04-15 16:41:55.845289', "updated_at" = '2012-04-15 16:41:50.847289', "attempts" = 1, "last_error" = 'undefined method `to_sym'' for ["first_name", "Haribhau"]:Array
+C:/haribhau_ingale/projects/file_upload/app/models/file_upload_job.rb:40:in `read_csv''
+c:/Ruby187/lib/ruby/gems/1.8/gems/fastercsv-1.5.4/lib/faster_csv.rb:362:in `each''
+c:/Ruby187/lib/ruby/gems/1.8/gems/fastercsv-1.5.4/lib/faster_csv.rb:362:in `each''
+C:/haribhau_ingale/projects/file_upload/app/models/file_upload_job.rb:38:in `read_csv''
+c:/Ruby187/lib/ruby/gems/1.8/gems/fastercsv-1.5.4/lib/faster_csv.rb:696:in `each''
+c:/Ruby187/lib/ruby/gems/1.8/gems/fastercsv-1.5.4/lib/faster_csv.rb:696:in `each''
+C:/haribhau_ingale/projects/file_upload/app/models/file_upload_job.rb:29:in `read_csv''
+C:/haribhau_ingale/projects/file_upload/app/models/file_upload_job.rb:12:in `perform''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/job.rb:217:in `invoke_job''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/job.rb:92:in `run_with_lock''
+c:/Ruby187/lib/ruby/1.8/benchmark.rb:308:in `realtime''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/job.rb:91:in `run_with_lock''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/job.rb:155:in `reserve_and_run_one_job''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/job.rb:154:in `each''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/job.rb:154:in `reserve_and_run_one_job''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/job.rb:201:in `work_off''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/job.rb:200:in `times''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/job.rb:200:in `work_off''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/worker.rb:28:in `start''
+c:/Ruby187/lib/ruby/1.8/benchmark.rb:308:in `realtime''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/worker.rb:27:in `start''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/worker.rb:24:in `loop''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/worker.rb:24:in `start''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/tasks/tasks.rb:13
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/task.rb:205:in `call''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/task.rb:205:in `execute''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/task.rb:200:in `each''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/task.rb:200:in `execute''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/task.rb:158:in `invoke_with_call_chain''
+c:/Ruby187/lib/ruby/1.8/monitor.rb:242:in `synchronize''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/task.rb:151:in `invoke_with_call_chain''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/task.rb:144:in `invoke''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/application.rb:116:in `invoke_task''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/application.rb:94:in `top_level''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/application.rb:94:in `each''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/application.rb:94:in `top_level''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/application.rb:133:in `standard_exception_handling''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/application.rb:88:in `top_level''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/application.rb:66:in `run''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/application.rb:133:in `standard_exception_handling''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/application.rb:63:in `run''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/bin/rake:33
+c:/Ruby187/bin/rake:19:in `load''
+c:/Ruby187/bin/rake:19' WHERE "id" = 6[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mDelayed::Job Update (1.0ms)[0m   [0;1mUPDATE "delayed_jobs" SET locked_by = null, locked_at = null WHERE (locked_by = 'host:85MR3Q1 pid:6724') [0m
+*** Starting job worker host:85MR3Q1 pid:904
+* [JOB] aquiring lock on FileUploadJob
+  [4;36;1mDelayed::Job Update (3.0ms)[0m   [0;1mUPDATE "delayed_jobs" SET locked_at = '2012-04-15 16:46:05.933880', locked_by = 'host:85MR3Q1 pid:904' WHERE (id = 6 and (locked_at is null or locked_at < '2012-04-15 12:46:05.933880')) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mDelayed::Job Update (0.0ms)[0m   [0;1mPG::Error: ERROR: value too long for type character varying(255)
+: UPDATE "delayed_jobs" SET "updated_at" = '2012-04-15 16:46:06.076888', "run_at" = '2012-04-15 16:46:11.073888', "last_error" = 'undefined method `to_sym'' for nil:NilClass
+c:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/whiny_nil.rb:52:in `method_missing''
+C:/haribhau_ingale/projects/file_upload/app/models/file_upload_job.rb:42:in `read_csv''
+C:/haribhau_ingale/projects/file_upload/app/models/file_upload_job.rb:38:in `each''
+C:/haribhau_ingale/projects/file_upload/app/models/file_upload_job.rb:38:in `read_csv''
+c:/Ruby187/lib/ruby/gems/1.8/gems/fastercsv-1.5.4/lib/faster_csv.rb:696:in `each''
+c:/Ruby187/lib/ruby/gems/1.8/gems/fastercsv-1.5.4/lib/faster_csv.rb:696:in `each''
+C:/haribhau_ingale/projects/file_upload/app/models/file_upload_job.rb:29:in `read_csv''
+C:/haribhau_ingale/projects/file_upload/app/models/file_upload_job.rb:12:in `perform''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/job.rb:217:in `invoke_job''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/job.rb:92:in `run_with_lock''
+c:/Ruby187/lib/ruby/1.8/benchmark.rb:308:in `realtime''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/job.rb:91:in `run_with_lock''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/job.rb:155:in `reserve_and_run_one_job''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/job.rb:154:in `each''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/job.rb:154:in `reserve_and_run_one_job''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/job.rb:201:in `work_off''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/job.rb:200:in `times''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/job.rb:200:in `work_off''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/worker.rb:28:in `start''
+c:/Ruby187/lib/ruby/1.8/benchmark.rb:308:in `realtime''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/worker.rb:27:in `start''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/worker.rb:24:in `loop''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/worker.rb:24:in `start''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/tasks/tasks.rb:13
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/task.rb:205:in `call''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/task.rb:205:in `execute''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/task.rb:200:in `each''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/task.rb:200:in `execute''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/task.rb:158:in `invoke_with_call_chain''
+c:/Ruby187/lib/ruby/1.8/monitor.rb:242:in `synchronize''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/task.rb:151:in `invoke_with_call_chain''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/task.rb:144:in `invoke''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/application.rb:116:in `invoke_task''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/application.rb:94:in `top_level''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/application.rb:94:in `each''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/application.rb:94:in `top_level''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/application.rb:133:in `standard_exception_handling''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/application.rb:88:in `top_level''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/application.rb:66:in `run''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/application.rb:133:in `standard_exception_handling''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/application.rb:63:in `run''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/bin/rake:33
+c:/Ruby187/bin/rake:19:in `load''
+c:/Ruby187/bin/rake:19', "attempts" = 1 WHERE "id" = 6[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mDelayed::Job Update (2.0ms)[0m   [0;1mUPDATE "delayed_jobs" SET locked_by = null, locked_at = null WHERE (locked_by = 'host:85MR3Q1 pid:904') [0m
+*** Starting job worker host:85MR3Q1 pid:7112
+* [JOB] aquiring lock on FileUploadJob
+  [4;36;1mDelayed::Job Update (35.0ms)[0m   [0;1mUPDATE "delayed_jobs" SET locked_at = '2012-04-15 16:48:48.120156', locked_by = 'host:85MR3Q1 pid:7112' WHERE (id = 6 and (locked_at is null or locked_at < '2012-04-15 12:48:48.120156')) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (47.0ms)[0m   [0;1mINSERT INTO "companies" ("ownership", "address", "zip", "phone", "employees", "size", "fax", "industry", "category", "created_at", "country", "contacts_count", "updated_at", "name", "description", "ticker_symbol", "billing_address", "status", "revenues", "email", "sic_code", "website", "state", "city", "shipping_address") VALUES(NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2012-04-15 16:48:48.276165', NULL, 0, '2012-04-15 16:48:48.276165', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (62.0ms)[0m   [0mINSERT INTO "contacts" ("source", "address", "zip", "phone", "mobile", "do_not_call", "fax", "reports_to", "created_at", "country", "updated_at", "last_name", "company_id", "status", "salutation", "first_name", "title", "email", "department", "state", "city") VALUES(NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2012-04-15 16:48:48.347169', NULL, '2012-04-15 16:48:48.347169', NULL, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;36;1mSQL (9.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mINSERT INTO "companies" ("ownership", "address", "zip", "phone", "employees", "size", "fax", "industry", "category", "created_at", "country", "contacts_count", "updated_at", "name", "description", "ticker_symbol", "billing_address", "status", "revenues", "email", "sic_code", "website", "state", "city", "shipping_address") VALUES(NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2012-04-15 16:48:48.429174', NULL, 0, '2012-04-15 16:48:48.429174', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO "contacts" ("source", "address", "zip", "phone", "mobile", "do_not_call", "fax", "reports_to", "created_at", "country", "updated_at", "last_name", "company_id", "status", "salutation", "first_name", "title", "email", "department", "state", "city") VALUES(NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2012-04-15 16:48:48.438174', NULL, '2012-04-15 16:48:48.438174', NULL, 2, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mDelayed::Job Destroy (1.0ms)[0m   [0;1mDELETE FROM "delayed_jobs" WHERE "id" = 6[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mCOMMIT[0m
+* [JOB] FileUploadJob completed after 0.2180
+* [JOB] aquiring lock on FileUploadJob
+  [4;36;1mDelayed::Job Update (3.0ms)[0m   [0;1mUPDATE "delayed_jobs" SET locked_at = '2012-04-15 16:48:48.452175', locked_by = 'host:85MR3Q1 pid:7112' WHERE (id = 7 and (locked_at is null or locked_at < '2012-04-15 12:48:48.452175')) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mINSERT INTO "companies" ("ownership", "address", "zip", "phone", "employees", "size", "fax", "industry", "category", "created_at", "country", "contacts_count", "updated_at", "name", "description", "ticker_symbol", "billing_address", "status", "revenues", "email", "sic_code", "website", "state", "city", "shipping_address") VALUES(NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2012-04-15 16:48:48.475176', NULL, 0, '2012-04-15 16:48:48.475176', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mINSERT INTO "contacts" ("source", "address", "zip", "phone", "mobile", "do_not_call", "fax", "reports_to", "created_at", "country", "updated_at", "last_name", "company_id", "status", "salutation", "first_name", "title", "email", "department", "state", "city") VALUES(NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2012-04-15 16:48:48.482177', NULL, '2012-04-15 16:48:48.482177', NULL, 3, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mINSERT INTO "companies" ("ownership", "address", "zip", "phone", "employees", "size", "fax", "industry", "category", "created_at", "country", "contacts_count", "updated_at", "name", "description", "ticker_symbol", "billing_address", "status", "revenues", "email", "sic_code", "website", "state", "city", "shipping_address") VALUES(NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2012-04-15 16:48:48.490177', NULL, 0, '2012-04-15 16:48:48.490177', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;35;1mSQL (7.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mINSERT INTO "contacts" ("source", "address", "zip", "phone", "mobile", "do_not_call", "fax", "reports_to", "created_at", "country", "updated_at", "last_name", "company_id", "status", "salutation", "first_name", "title", "email", "department", "state", "city") VALUES(NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2012-04-15 16:48:48.503178', NULL, '2012-04-15 16:48:48.503178', NULL, 4, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL) RETURNING "id"[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mDelayed::Job Destroy (0.0ms)[0m   [0;1mDELETE FROM "delayed_jobs" WHERE "id" = 7[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+* [JOB] FileUploadJob completed after 0.0530
+2 jobs processed at 2.2221 j/s, 0 failed ...
+Exiting...
+Exiting...
+Exiting...
+Exiting...
+Exiting...
+Exiting...
+Exiting...
+Exiting...
+Exiting...
+Exiting...
+Exiting...
+Exiting...
+Exiting...
+Exiting...
+  [4;36;1mDelayed::Job Update (0.0ms)[0m   [0;1mUPDATE "delayed_jobs" SET locked_by = null, locked_at = null WHERE (locked_by = 'host:85MR3Q1 pid:7112') [0m
+*** Starting job worker host:85MR3Q1 pid:5376
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UploadsController#parse (for 127.0.0.1 at 2012-04-15 22:21:34) [POST]
+  Parameters: {"authenticity_token"=>"piSYHU/0f0JeFrk5BsERqP74XDoY66UxTPbV22O7t0c=", "contacts"=>#<File:C:/Users/HARIBH~1/AppData/Local/Temp/RackMultipart20120415-5620-z257mr-0>, "commit"=>"Upload"}
+Rendering template within layouts/application
+Rendering uploads/parse
+Completed in 522ms (View: 27, DB: 0) | 200 OK [http://localhost/uploads/parse]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing UploadsController#create (for 127.0.0.1 at 2012-04-15 22:23:04) [POST]
+  Parameters: {"authenticity_token"=>"piSYHU/0f0JeFrk5BsERqP74XDoY66UxTPbV22O7t0c=", "contacts"=>{":company_size"=>"first_name", ":company_fax"=>"last_name", ":country"=>"country", ":company_employees"=>"first_name", ":company_industry"=>"first_name", ":address"=>"address", ":email"=>"email", ":company_phone"=>"first_name", ":city"=>"city", ":title"=>"title", ":company_website"=>"first_name", ":website"=>"first_name", ":phone"=>"phone", ":zip"=>"zip", ":company_revenue"=>"first_name", ":state"=>"state"}, "commit"=>"Upload Contacts"}
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mINSERT INTO "delayed_jobs" ("priority", "run_at", "created_at", "failed_at", "updated_at", "handler", "locked_at", "locked_by", "last_error", "attempts") VALUES(0, '2012-04-15 16:53:04.380813', '2012-04-15 16:53:04.424816', NULL, '2012-04-15 16:53:04.424816', '--- !ruby/object:FileUploadJob 
+column_mapping: !map:HashWithIndifferentAccess 
+ ":company_size": first_name
+ ":country": country
+ ":company_fax": last_name
+ ":company_employees": first_name
+ ":email": email
+ ":address": address
+ ":company_industry": first_name
+ ":title": title
+ ":city": city
+ ":company_phone": first_name
+ ":zip": zip
+ ":phone": phone
+ ":website": first_name
+ ":company_website": first_name
+ ":state": state
+ ":company_revenue": first_name
+filename: tmpfile20120415102134ideas.csv
+', NULL, NULL, NULL, 0) RETURNING "id"[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering uploads/new
+Completed in 125ms (View: 6, DB: 4) | 200 OK [http://localhost/uploads]
+* [JOB] aquiring lock on FileUploadJob
+  [4;36;1mDelayed::Job Update (3.0ms)[0m   [0;1mUPDATE "delayed_jobs" SET locked_at = '2012-04-15 16:53:07.736005', locked_by = 'host:85MR3Q1 pid:5376' WHERE (id = 8 and (locked_at is null or locked_at < '2012-04-15 12:53:07.736005')) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1mINSERT INTO "companies" ("website", "city", "fax", "industry", "status", "shipping_address", "country", "revenues", "contacts_count", "ownership", "size", "created_at", "email", "employees", "category", "billing_address", "description", "name", "phone", "address", "state", "updated_at", "sic_code", "zip", "ticker_symbol") VALUES(NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, '2012-04-15 16:53:07.889014', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2012-04-15 16:53:07.889014', NULL, NULL, NULL) RETURNING "id"[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mINSERT INTO "contacts" ("company_id", "city", "department", "fax", "first_name", "title", "status", "reports_to", "do_not_call", "mobile", "last_name", "country", "created_at", "email", "phone", "address", "state", "source", "updated_at", "zip", "salutation") VALUES(5, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2012-04-15 16:53:07.920016', NULL, NULL, NULL, NULL, NULL, '2012-04-15 16:53:07.920016', NULL, NULL) RETURNING "id"[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mINSERT INTO "companies" ("website", "city", "fax", "industry", "status", "shipping_address", "country", "revenues", "contacts_count", "ownership", "size", "created_at", "email", "employees", "category", "billing_address", "description", "name", "phone", "address", "state", "updated_at", "sic_code", "zip", "ticker_symbol") VALUES(NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, '2012-04-15 16:53:07.948017', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2012-04-15 16:53:07.948017', NULL, NULL, NULL) RETURNING "id"[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mINSERT INTO "contacts" ("company_id", "city", "department", "fax", "first_name", "title", "status", "reports_to", "do_not_call", "mobile", "last_name", "country", "created_at", "email", "phone", "address", "state", "source", "updated_at", "zip", "salutation") VALUES(6, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2012-04-15 16:53:07.952018', NULL, NULL, NULL, NULL, NULL, '2012-04-15 16:53:07.952018', NULL, NULL) RETURNING "id"[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mDelayed::Job Destroy (0.0ms)[0m   [0;1mDELETE FROM "delayed_jobs" WHERE "id" = 8[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+* [JOB] FileUploadJob completed after 0.1610
+1 jobs processed at 1.4084 j/s, 0 failed ...
+  [4;35;1mSQL (1.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing UploadsController#parse (for 127.0.0.1 at 2012-04-15 22:25:24) [POST]
+  Parameters: {"authenticity_token"=>"piSYHU/0f0JeFrk5BsERqP74XDoY66UxTPbV22O7t0c=", "contacts"=>#<File:C:/Users/HARIBH~1/AppData/Local/Temp/RackMultipart20120415-5620-1rkv6k5-0>, "commit"=>"Upload"}
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of ActiveRecord::Base.
+The error occurred while evaluating nil.[]):
+  app/models/file_upload.rb:31:in `valid?'
+  app/models/file_upload.rb:15:in `parse'
+  app/controllers/uploads_controller.rb:7:in `parse'
+  c:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (44.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UploadsController#parse (for 127.0.0.1 at 2012-04-15 22:26:04) [POST]
+  Parameters: {"authenticity_token"=>"piSYHU/0f0JeFrk5BsERqP74XDoY66UxTPbV22O7t0c=", "commit"=>"Upload", "contacts"=>#<File:C:/Users/HARIBH~1/AppData/Local/Temp/RackMultipart20120415-7660-1r89i7o-0>}
+Rendering template within layouts/application
+Rendering uploads/parse
+Completed in 633ms (View: 55, DB: 1) | 200 OK [http://localhost/uploads/parse]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UploadsController#parse (for 127.0.0.1 at 2012-04-15 22:29:41) [POST]
+  Parameters: {"commit"=>"Upload", "contacts"=>#<File:C:/Users/HARIBH~1/AppData/Local/Temp/RackMultipart20120415-3864-165yq7b-0>, "authenticity_token"=>"piSYHU/0f0JeFrk5BsERqP74XDoY66UxTPbV22O7t0c="}
+Rendering template within layouts/application
+Rendering uploads/parse
+Completed in 390ms (View: 26, DB: 1) | 200 OK [http://localhost/uploads/parse]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing UploadsController#create (for 127.0.0.1 at 2012-04-15 22:30:41) [POST]
+  Parameters: {"commit"=>"Upload Contacts", "contacts"=>{"company_industry"=>"first_name", "company_phone"=>"company_name", "city"=>"city", "address"=>"address", "company_website"=>"first_name", "country"=>"country", "phone"=>"phone", "zip"=>"zip", "company_fax"=>"first_name", "title"=>"title", "email"=>"email", "website"=>"first_name", "company_revenue"=>"first_name", "company_size"=>"first_name", "company_employees"=>"first_name", "state"=>"state"}, "authenticity_token"=>"piSYHU/0f0JeFrk5BsERqP74XDoY66UxTPbV22O7t0c="}
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mINSERT INTO "delayed_jobs" ("run_at", "failed_at", "priority", "handler", "last_error", "locked_at", "created_at", "locked_by", "updated_at", "attempts") VALUES('2012-04-15 17:00:41.284947', NULL, 0, '--- !ruby/object:FileUploadJob 
+column_mapping: !map:HashWithIndifferentAccess 
+ address: address
+ city: city
+ company_phone: company_name
+ company_industry: first_name
+ company_website: first_name
+ country: country
+ zip: zip
+ phone: phone
+ company_fax: first_name
+ email: email
+ title: title
+ website: first_name
+ company_revenue: first_name
+ company_size: first_name
+ company_employees: first_name
+ state: state
+filename: tmpfile20120415102942ideas.csv
+', NULL, NULL, '2012-04-15 17:00:41.327949', NULL, '2012-04-15 17:00:41.327949', 0) RETURNING "id"[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering uploads/new
+Completed in 124ms (View: 6, DB: 2) | 200 OK [http://localhost/uploads]
+* [JOB] aquiring lock on FileUploadJob
+  [4;36;1mDelayed::Job Update (2.0ms)[0m   [0;1mUPDATE "delayed_jobs" SET locked_at = '2012-04-15 17:00:43.196056', locked_by = 'host:85MR3Q1 pid:5376' WHERE (id = 9 and (locked_at is null or locked_at < '2012-04-15 13:00:43.196056')) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mINSERT INTO "companies" ("website", "city", "fax", "industry", "status", "shipping_address", "country", "revenues", "contacts_count", "ownership", "size", "created_at", "email", "employees", "category", "billing_address", "description", "name", "phone", "address", "state", "updated_at", "sic_code", "zip", "ticker_symbol") VALUES(NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, '2012-04-15 17:00:43.236058', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2012-04-15 17:00:43.236058', NULL, NULL, NULL) RETURNING "id"[0m
+  [4;35;1mSQL (30.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mINSERT INTO "contacts" ("company_id", "city", "department", "fax", "first_name", "title", "status", "reports_to", "do_not_call", "mobile", "last_name", "country", "created_at", "email", "phone", "address", "state", "source", "updated_at", "zip", "salutation") VALUES(7, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2012-04-15 17:00:43.271060', NULL, NULL, NULL, NULL, NULL, '2012-04-15 17:00:43.271060', NULL, NULL) RETURNING "id"[0m
+  [4;36;1mSQL (11.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO "companies" ("website", "city", "fax", "industry", "status", "shipping_address", "country", "revenues", "contacts_count", "ownership", "size", "created_at", "email", "employees", "category", "billing_address", "description", "name", "phone", "address", "state", "updated_at", "sic_code", "zip", "ticker_symbol") VALUES(NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, '2012-04-15 17:00:43.313063', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2012-04-15 17:00:43.313063', NULL, NULL, NULL) RETURNING "id"[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mINSERT INTO "contacts" ("company_id", "city", "department", "fax", "first_name", "title", "status", "reports_to", "do_not_call", "mobile", "last_name", "country", "created_at", "email", "phone", "address", "state", "source", "updated_at", "zip", "salutation") VALUES(8, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2012-04-15 17:00:43.320063', NULL, NULL, NULL, NULL, NULL, '2012-04-15 17:00:43.320063', NULL, NULL) RETURNING "id"[0m
+  [4;36;1mSQL (5.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mDelayed::Job Destroy (1.0ms)[0m   [0;1mDELETE FROM "delayed_jobs" WHERE "id" = 9[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mCOMMIT[0m
+* [JOB] FileUploadJob completed after 0.1330
+1 jobs processed at 7.0419 j/s, 0 failed ...
+Exiting...
+Exiting...
+Exiting...
+  [4;36;1mDelayed::Job Update (1.0ms)[0m   [0;1mUPDATE "delayed_jobs" SET locked_by = null, locked_at = null WHERE (locked_by = 'host:85MR3Q1 pid:5376') [0m
+*** Starting job worker host:85MR3Q1 pid:2796
+  [4;35;1mSQL (1.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing UploadsController#parse (for 127.0.0.1 at 2012-04-15 22:31:53) [POST]
+  Parameters: {"commit"=>"Upload", "contacts"=>#<File:C:/Users/HARIBH~1/AppData/Local/Temp/RackMultipart20120415-3864-xqd9h0-0>, "authenticity_token"=>"piSYHU/0f0JeFrk5BsERqP74XDoY66UxTPbV22O7t0c="}
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of ActiveRecord::Base.
+The error occurred while evaluating nil.[]):
+  app/models/file_upload.rb:31:in `valid?'
+  app/models/file_upload.rb:15:in `parse'
+  app/controllers/uploads_controller.rb:7:in `parse'
+  c:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (36.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UploadsController#parse (for 127.0.0.1 at 2012-04-15 22:33:10) [POST]
+  Parameters: {"authenticity_token"=>"piSYHU/0f0JeFrk5BsERqP74XDoY66UxTPbV22O7t0c=", "contacts"=>#<File:C:/Users/HARIBH~1/AppData/Local/Temp/RackMultipart20120415-408-fpz1as-0>, "commit"=>"Upload"}
+Rendering template within layouts/application
+Rendering uploads/parse
+Completed in 610ms (View: 42, DB: 2) | 200 OK [http://localhost/uploads/parse]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing UploadsController#create (for 127.0.0.1 at 2012-04-15 22:34:04) [POST]
+  Parameters: {"authenticity_token"=>"piSYHU/0f0JeFrk5BsERqP74XDoY66UxTPbV22O7t0c=", "contacts"=>{"phone"=>"phone", "city"=>"city", "company_phone"=>"company_url", "website"=>"company_name", "state"=>"state", "address"=>"address", "zip"=>"zip", "company_size"=>"first_name", "title"=>"title", "email"=>"email", "company_revenue"=>"first_name", "company_employees"=>"first_name", "company_industry"=>"first_name", "company_website"=>"first_name", "company_fax"=>"first_name", "country"=>"country"}, "commit"=>"Upload Contacts"}
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mINSERT INTO "delayed_jobs" ("failed_at", "locked_by", "handler", "last_error", "priority", "created_at", "updated_at", "run_at", "attempts", "locked_at") VALUES(NULL, NULL, '--- !ruby/object:FileUploadJob 
+column_mapping: !map:HashWithIndifferentAccess 
+ city: city
+ phone: phone
+ state: state
+ website: company_name
+ company_phone: company_url
+ address: address
+ zip: zip
+ title: title
+ company_size: first_name
+ email: email
+ company_revenue: first_name
+ company_employees: first_name
+ company_industry: first_name
+ country: country
+ company_fax: first_name
+ company_website: first_name
+filename: tmpfile20120415103311ideas.csv
+', NULL, 0, '2012-04-15 17:04:04.740584', '2012-04-15 17:04:04.740584', '2012-04-15 17:04:04.688581', 0, NULL) RETURNING "id"[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering uploads/new
+Completed in 147ms (View: 11, DB: 6) | 200 OK [http://localhost/uploads]
+* [JOB] aquiring lock on FileUploadJob
+  [4;36;1mDelayed::Job Update (4.0ms)[0m   [0;1mUPDATE "delayed_jobs" SET locked_at = '2012-04-15 17:04:09.777872', locked_by = 'host:85MR3Q1 pid:2796' WHERE (id = 10 and (locked_at is null or locked_at < '2012-04-15 13:04:09.777872')) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mDelayed::Job Update (0.0ms)[0m   [0;1mPG::Error: ERROR: value too long for type character varying(255)
+: UPDATE "delayed_jobs" SET "run_at" = '2012-04-15 17:04:14.928881', "last_error" = 'undefined method `to_sym'' for nil:NilClass
+c:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/whiny_nil.rb:52:in `method_missing''
+C:/haribhau_ingale/projects/file_upload/app/models/file_upload_job.rb:43:in `read_csv''
+C:/haribhau_ingale/projects/file_upload/app/models/file_upload_job.rb:38:in `each''
+C:/haribhau_ingale/projects/file_upload/app/models/file_upload_job.rb:38:in `read_csv''
+c:/Ruby187/lib/ruby/gems/1.8/gems/fastercsv-1.5.4/lib/faster_csv.rb:696:in `each''
+c:/Ruby187/lib/ruby/gems/1.8/gems/fastercsv-1.5.4/lib/faster_csv.rb:696:in `each''
+C:/haribhau_ingale/projects/file_upload/app/models/file_upload_job.rb:29:in `read_csv''
+C:/haribhau_ingale/projects/file_upload/app/models/file_upload_job.rb:12:in `perform''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/job.rb:217:in `invoke_job''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/job.rb:92:in `run_with_lock''
+c:/Ruby187/lib/ruby/1.8/benchmark.rb:308:in `realtime''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/job.rb:91:in `run_with_lock''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/job.rb:155:in `reserve_and_run_one_job''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/job.rb:154:in `each''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/job.rb:154:in `reserve_and_run_one_job''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/job.rb:201:in `work_off''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/job.rb:200:in `times''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/job.rb:200:in `work_off''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/worker.rb:28:in `start''
+c:/Ruby187/lib/ruby/1.8/benchmark.rb:308:in `realtime''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/worker.rb:27:in `start''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/worker.rb:24:in `loop''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/worker.rb:24:in `start''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/tasks/tasks.rb:13
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/task.rb:205:in `call''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/task.rb:205:in `execute''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/task.rb:200:in `each''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/task.rb:200:in `execute''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/task.rb:158:in `invoke_with_call_chain''
+c:/Ruby187/lib/ruby/1.8/monitor.rb:242:in `synchronize''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/task.rb:151:in `invoke_with_call_chain''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/task.rb:144:in `invoke''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/application.rb:116:in `invoke_task''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/application.rb:94:in `top_level''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/application.rb:94:in `each''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/application.rb:94:in `top_level''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/application.rb:133:in `standard_exception_handling''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/application.rb:88:in `top_level''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/application.rb:66:in `run''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/application.rb:133:in `standard_exception_handling''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/application.rb:63:in `run''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/bin/rake:33
+c:/Ruby187/bin/rake:19:in `load''
+c:/Ruby187/bin/rake:19', "attempts" = 1, "updated_at" = '2012-04-15 17:04:09.930881' WHERE "id" = 10[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mDelayed::Job Update (2.0ms)[0m   [0;1mUPDATE "delayed_jobs" SET locked_by = null, locked_at = null WHERE (locked_by = 'host:85MR3Q1 pid:2796') [0m
+*** Starting job worker host:85MR3Q1 pid:6608
+* [JOB] aquiring lock on FileUploadJob
+  [4;36;1mDelayed::Job Update (2.0ms)[0m   [0;1mUPDATE "delayed_jobs" SET locked_at = '2012-04-15 17:04:58.402653', locked_by = 'host:85MR3Q1 pid:6608' WHERE (id = 10 and (locked_at is null or locked_at < '2012-04-15 13:04:58.402653')) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mDelayed::Job Update (0.0ms)[0m   [0;1mPG::Error: ERROR: value too long for type character varying(255)
+: UPDATE "delayed_jobs" SET "last_error" = 'undefined method `to_sym'' for nil:NilClass
+c:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/whiny_nil.rb:52:in `method_missing''
+C:/haribhau_ingale/projects/file_upload/app/models/file_upload_job.rb:43:in `read_csv''
+C:/haribhau_ingale/projects/file_upload/app/models/file_upload_job.rb:38:in `each''
+C:/haribhau_ingale/projects/file_upload/app/models/file_upload_job.rb:38:in `read_csv''
+c:/Ruby187/lib/ruby/gems/1.8/gems/fastercsv-1.5.4/lib/faster_csv.rb:696:in `each''
+c:/Ruby187/lib/ruby/gems/1.8/gems/fastercsv-1.5.4/lib/faster_csv.rb:696:in `each''
+C:/haribhau_ingale/projects/file_upload/app/models/file_upload_job.rb:29:in `read_csv''
+C:/haribhau_ingale/projects/file_upload/app/models/file_upload_job.rb:12:in `perform''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/job.rb:217:in `invoke_job''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/job.rb:92:in `run_with_lock''
+c:/Ruby187/lib/ruby/1.8/benchmark.rb:308:in `realtime''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/job.rb:91:in `run_with_lock''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/job.rb:155:in `reserve_and_run_one_job''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/job.rb:154:in `each''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/job.rb:154:in `reserve_and_run_one_job''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/job.rb:201:in `work_off''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/job.rb:200:in `times''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/job.rb:200:in `work_off''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/worker.rb:28:in `start''
+c:/Ruby187/lib/ruby/1.8/benchmark.rb:308:in `realtime''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/worker.rb:27:in `start''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/worker.rb:24:in `loop''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/worker.rb:24:in `start''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/tasks/tasks.rb:13
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/task.rb:205:in `call''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/task.rb:205:in `execute''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/task.rb:200:in `each''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/task.rb:200:in `execute''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/task.rb:158:in `invoke_with_call_chain''
+c:/Ruby187/lib/ruby/1.8/monitor.rb:242:in `synchronize''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/task.rb:151:in `invoke_with_call_chain''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/task.rb:144:in `invoke''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/application.rb:116:in `invoke_task''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/application.rb:94:in `top_level''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/application.rb:94:in `each''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/application.rb:94:in `top_level''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/application.rb:133:in `standard_exception_handling''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/application.rb:88:in `top_level''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/application.rb:66:in `run''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/application.rb:133:in `standard_exception_handling''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/application.rb:63:in `run''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/bin/rake:33
+c:/Ruby187/bin/rake:19:in `load''
+c:/Ruby187/bin/rake:19', "attempts" = 1, "run_at" = '2012-04-15 17:05:03.559662', "updated_at" = '2012-04-15 17:04:58.561662' WHERE "id" = 10[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mDelayed::Job Update (2.0ms)[0m   [0;1mUPDATE "delayed_jobs" SET locked_by = null, locked_at = null WHERE (locked_by = 'host:85MR3Q1 pid:6608') [0m
+*** Starting job worker host:85MR3Q1 pid:3336
+* [JOB] aquiring lock on FileUploadJob
+  [4;36;1mDelayed::Job Update (2.0ms)[0m   [0;1mUPDATE "delayed_jobs" SET locked_at = '2012-04-15 17:06:26.388686', locked_by = 'host:85MR3Q1 pid:3336' WHERE (id = 10 and (locked_at is null or locked_at < '2012-04-15 13:06:26.388686')) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mDelayed::Job Update (0.0ms)[0m   [0;1mPG::Error: ERROR: value too long for type character varying(255)
+: UPDATE "delayed_jobs" SET "updated_at" = '2012-04-15 17:06:26.558695', "last_error" = 'undefined method `to_sym'' for nil:NilClass
+c:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/whiny_nil.rb:52:in `method_missing''
+C:/haribhau_ingale/projects/file_upload/app/models/file_upload_job.rb:45:in `read_csv''
+C:/haribhau_ingale/projects/file_upload/app/models/file_upload_job.rb:38:in `each''
+C:/haribhau_ingale/projects/file_upload/app/models/file_upload_job.rb:38:in `read_csv''
+c:/Ruby187/lib/ruby/gems/1.8/gems/fastercsv-1.5.4/lib/faster_csv.rb:696:in `each''
+c:/Ruby187/lib/ruby/gems/1.8/gems/fastercsv-1.5.4/lib/faster_csv.rb:696:in `each''
+C:/haribhau_ingale/projects/file_upload/app/models/file_upload_job.rb:29:in `read_csv''
+C:/haribhau_ingale/projects/file_upload/app/models/file_upload_job.rb:12:in `perform''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/job.rb:217:in `invoke_job''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/job.rb:92:in `run_with_lock''
+c:/Ruby187/lib/ruby/1.8/benchmark.rb:308:in `realtime''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/job.rb:91:in `run_with_lock''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/job.rb:155:in `reserve_and_run_one_job''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/job.rb:154:in `each''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/job.rb:154:in `reserve_and_run_one_job''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/job.rb:201:in `work_off''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/job.rb:200:in `times''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/job.rb:200:in `work_off''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/worker.rb:28:in `start''
+c:/Ruby187/lib/ruby/1.8/benchmark.rb:308:in `realtime''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/worker.rb:27:in `start''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/worker.rb:24:in `loop''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/delayed/worker.rb:24:in `start''
+C:/haribhau_ingale/projects/file_upload/vendor/plugins/delayed_job/lib/tasks/tasks.rb:13
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/task.rb:205:in `call''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/task.rb:205:in `execute''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/task.rb:200:in `each''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/task.rb:200:in `execute''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/task.rb:158:in `invoke_with_call_chain''
+c:/Ruby187/lib/ruby/1.8/monitor.rb:242:in `synchronize''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/task.rb:151:in `invoke_with_call_chain''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/task.rb:144:in `invoke''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/application.rb:116:in `invoke_task''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/application.rb:94:in `top_level''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/application.rb:94:in `each''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/application.rb:94:in `top_level''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/application.rb:133:in `standard_exception_handling''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/application.rb:88:in `top_level''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/application.rb:66:in `run''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/application.rb:133:in `standard_exception_handling''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/lib/rake/application.rb:63:in `run''
+c:/Ruby187/lib/ruby/gems/1.8/gems/rake-0.9.2.2/bin/rake:33
+c:/Ruby187/bin/rake:19:in `load''
+c:/Ruby187/bin/rake:19', "run_at" = '2012-04-15 17:06:31.557695', "attempts" = 1 WHERE "id" = 10[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mDelayed::Job Update (2.0ms)[0m   [0;1mUPDATE "delayed_jobs" SET locked_by = null, locked_at = null WHERE (locked_by = 'host:85MR3Q1 pid:3336') [0m
+*** Starting job worker host:85MR3Q1 pid:4440
+* [JOB] aquiring lock on FileUploadJob
+  [4;36;1mDelayed::Job Update (2.0ms)[0m   [0;1mUPDATE "delayed_jobs" SET locked_at = '2012-04-15 17:07:36.614702', locked_by = 'host:85MR3Q1 pid:4440' WHERE (id = 10 and (locked_at is null or locked_at < '2012-04-15 13:07:36.614702')) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mINSERT INTO "companies" ("email", "state", "zip", "description", "category", "size", "name", "fax", "employees", "sic_code", "website", "status", "updated_at", "industry", "revenues", "city", "ticker_symbol", "ownership", "country", "shipping_address", "phone", "address", "contacts_count", "created_at", "billing_address") VALUES(NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Self', NULL, '2012-04-15 17:07:36.781712', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, '2012-04-15 17:07:36.781712', NULL) RETURNING "id"[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mINSERT INTO "contacts" ("email", "state", "zip", "department", "do_not_call", "reports_to", "first_name", "fax", "salutation", "status", "updated_at", "company_id", "title", "source", "last_name", "city", "country", "mobile", "phone", "address", "created_at") VALUES('hari31582@gmail.com', 'MH', '511054', NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2012-04-15 17:07:36.795713', 9, 'SE', NULL, NULL, 'pune', 'India', NULL, '9011641389', 'Pune', '2012-04-15 17:07:36.795713') RETURNING "id"[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mINSERT INTO "companies" ("email", "state", "zip", "description", "category", "size", "name", "fax", "employees", "sic_code", "website", "status", "updated_at", "industry", "revenues", "city", "ticker_symbol", "ownership", "country", "shipping_address", "phone", "address", "contacts_count", "created_at", "billing_address") VALUES(NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2012-04-15 17:07:36.901719', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, '2012-04-15 17:07:36.901719', NULL) RETURNING "id"[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO "contacts" ("email", "state", "zip", "department", "do_not_call", "reports_to", "first_name", "fax", "salutation", "status", "updated_at", "company_id", "title", "source", "last_name", "city", "country", "mobile", "phone", "address", "created_at") VALUES(NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2012-04-15 17:07:36.905719', 10, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2012-04-15 17:07:36.905719') RETURNING "id"[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mDelayed::Job Destroy (1.0ms)[0m   [0;1mDELETE FROM "delayed_jobs" WHERE "id" = 10[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCOMMIT[0m
+* [JOB] FileUploadJob completed after 0.2490
+1 jobs processed at 1.2330 j/s, 0 failed ...
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing UploadsController#parse (for 127.0.0.1 at 2012-04-15 22:40:02) [POST]
+  Parameters: {"authenticity_token"=>"piSYHU/0f0JeFrk5BsERqP74XDoY66UxTPbV22O7t0c=", "contacts"=>#<File:C:/Users/HARIBH~1/AppData/Local/Temp/RackMultipart20120415-408-1e8n8mc-0>, "commit"=>"Upload"}
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of ActiveRecord::Base.
+The error occurred while evaluating nil.[]):
+  app/models/file_upload.rb:31:in `valid?'
+  app/models/file_upload.rb:15:in `parse'
+  app/controllers/uploads_controller.rb:7:in `parse'
+  c:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (44.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UploadsController#parse (for 127.0.0.1 at 2012-04-15 22:40:47) [POST]
+  Parameters: {"contacts"=>#<File:C:/Users/HARIBH~1/AppData/Local/Temp/RackMultipart20120415-7980-6juype-0>, "authenticity_token"=>"piSYHU/0f0JeFrk5BsERqP74XDoY66UxTPbV22O7t0c=", "commit"=>"Upload"}
+Rendering template within layouts/application
+Rendering uploads/parse
+Completed in 430ms (View: 24, DB: 0) | 200 OK [http://localhost/uploads/parse]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing UploadsController#create (for 127.0.0.1 at 2012-04-15 22:41:24) [POST]
+  Parameters: {"contacts"=>{"zip"=>"zip", "title"=>"title", "company_size"=>"first_name", "company_fax"=>"first_name", "company_phone"=>"tags", "phone"=>"phone", "company_industry"=>"first_name", "country"=>"country", "city"=>"city", "company_revenue"=>"first_name", "website"=>"company_url", "email"=>"email", "company_employees"=>"first_name", "state"=>"state", "company_website"=>"first_name", "address"=>"address"}, "authenticity_token"=>"piSYHU/0f0JeFrk5BsERqP74XDoY66UxTPbV22O7t0c=", "commit"=>"Upload Contacts"}
+  [4;36;1mSQL (1.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mINSERT INTO "delayed_jobs" ("run_at", "updated_at", "priority", "created_at", "locked_at", "handler", "locked_by", "attempts", "last_error", "failed_at") VALUES('2012-04-15 17:11:24.395731', '2012-04-15 17:11:24.449734', 0, '2012-04-15 17:11:24.449734', NULL, '--- !ruby/object:FileUploadJob 
+column_mapping: !map:HashWithIndifferentAccess 
+ title: title
+ zip: zip
+ phone: phone
+ company_phone: tags
+ company_fax: first_name
+ company_size: first_name
+ company_industry: first_name
+ city: city
+ country: country
+ email: email
+ website: company_url
+ company_revenue: first_name
+ state: state
+ company_employees: first_name
+ company_website: first_name
+ address: address
+filename: tmpfile20120415104047ideas.csv
+', NULL, 0, NULL, NULL) RETURNING "id"[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering uploads/new
+Completed in 150ms (View: 13, DB: 6) | 200 OK [http://localhost/uploads]
+* [JOB] aquiring lock on FileUploadJob
+  [4;36;1mDelayed::Job Update (2.0ms)[0m   [0;1mUPDATE "delayed_jobs" SET locked_at = '2012-04-15 17:11:27.004880', locked_by = 'host:85MR3Q1 pid:4440' WHERE (id = 11 and (locked_at is null or locked_at < '2012-04-15 13:11:27.004880')) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mINSERT INTO "companies" ("email", "state", "zip", "description", "category", "size", "name", "fax", "employees", "sic_code", "website", "status", "updated_at", "industry", "revenues", "city", "ticker_symbol", "ownership", "country", "shipping_address", "phone", "address", "contacts_count", "created_at", "billing_address") VALUES(NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'www.google.com', NULL, '2012-04-15 17:11:27.147888', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, '2012-04-15 17:11:27.147888', NULL) RETURNING "id"[0m
+  [4;35;1mSQL (151.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mINSERT INTO "contacts" ("email", "state", "zip", "department", "do_not_call", "reports_to", "first_name", "fax", "salutation", "status", "updated_at", "company_id", "title", "source", "last_name", "city", "country", "mobile", "phone", "address", "created_at") VALUES('hari31582@gmail.com', 'MH', '511054', NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2012-04-15 17:11:27.304897', 11, 'SE', NULL, NULL, 'pune', 'India', NULL, '9011641389', 'Pune', '2012-04-15 17:11:27.304897') RETURNING "id"[0m
+  [4;36;1mSQL (195.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mINSERT INTO "companies" ("email", "state", "zip", "description", "category", "size", "name", "fax", "employees", "sic_code", "website", "status", "updated_at", "industry", "revenues", "city", "ticker_symbol", "ownership", "country", "shipping_address", "phone", "address", "contacts_count", "created_at", "billing_address") VALUES(NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2012-04-15 17:11:27.654917', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, '2012-04-15 17:11:27.654917', NULL) RETURNING "id"[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO "contacts" ("email", "state", "zip", "department", "do_not_call", "reports_to", "first_name", "fax", "salutation", "status", "updated_at", "company_id", "title", "source", "last_name", "city", "country", "mobile", "phone", "address", "created_at") VALUES(NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2012-04-15 17:11:27.659917', 12, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2012-04-15 17:11:27.659917') RETURNING "id"[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mDelayed::Job Destroy (1.0ms)[0m   [0;1mDELETE FROM "delayed_jobs" WHERE "id" = 11[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCOMMIT[0m
+* [JOB] FileUploadJob completed after 0.6560
+1 jobs processed at 1.5037 j/s, 0 failed ...
