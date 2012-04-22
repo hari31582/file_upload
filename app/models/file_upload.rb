@@ -36,13 +36,19 @@ class FileUpload
       return false
     end
 
+    #Check for size
+    
+
+    if (@file.size/(1024*1024)) > 5
+      @errors << "File Size is greater than 5MB"
+      return false
+    end
+
     #Parse file
     parse_file
 
-    #check valid columns
-    for col in  (ApplicationConfiguration.settings[:file_upload][:not_supported_columns].split & @columns)
-      @errors << "Column #{col} is not supported. Please remove this column"
-    end
+   
+   
     @errors.empty?
 
   end

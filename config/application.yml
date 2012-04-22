@@ -1,3 +1,4 @@
 :file_upload:
    :extentions: 'xls xlsx csv'
-   :not_supported_columns: 'id'
+   :not_supported_columns: 'id status company_id tag_id'
+   
