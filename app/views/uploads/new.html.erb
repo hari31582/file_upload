@@ -1,5 +1,7 @@
+
 <div class="file_upload">
-  <% if @uploader %>
+  <%=  flash[:notice] %>
+    <% if @uploader %>
     <ul>
       <% for err in @uploader.errors %>
         <li><%= err %> </li>

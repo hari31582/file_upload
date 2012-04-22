@@ -1,5 +1,5 @@
 # This class has responsibility to parse file and validate uploaded file
-require 'fastercsv'
+
 require 'roo'
 class FileUpload
 
@@ -13,11 +13,13 @@ class FileUpload
   end
 
   def parse
+
     if  valid?
-       #Save file in Temporary folder
-       f = File.open("#{RAILS_ROOT}/tmp/#{@new_filename}","w")
-       f.write File.open(@file.path, "r").read
-       f.close
+      #Save file in Temporary folder
+      f = File.open("#{RAILS_ROOT}/tmp/#{@new_filename}","wb")
+      f.write File.open(@file.path, "rb").read
+      f.close
+      @file.close
     end
   end
 
@@ -35,11 +37,7 @@ class FileUpload
     end
 
     #Parse file
-    if @file.original_filename =~/csv/
-      parse_csv_file
-    else
-      parse_xls_file
-    end
+    parse_file
 
     #check valid columns
     for col in  (ApplicationConfiguration.settings[:file_upload][:not_supported_columns].split & @columns)
@@ -51,25 +49,14 @@ class FileUpload
 
   private
 
-  def parse_csv_file
-    @columns = FasterCSV.parse(@file).first
-  end
-
-  def parse_xls_file
-    
-    
-
-    excel = Excelx.new(@file.path,nil,:ignore)
-
-    excel.default_sheet = excel.sheets.first
-     excel.first_column
-    for cell_num in excel.first_column..excel.last_column
-      @columns << excel.cell(excel.first_row,cell_num)
+  def parse_file
+    file = Roo::Spreadsheet.custom_open(@file.original_filename,@file.path,nil,:ignore)
+    file.default_sheet = file.sheets.first
+    for cell_num in file.first_column..file.last_column
+      @columns << file.cell(file.first_row,cell_num)
     end
-
-    p "Excel columns"
-    p @columns
-    
   end
 
+
+  
 end

@@ -1,23 +1,26 @@
 <div class="file_upload">
   <h1>Upload Contacts</h1>
   <%form_for :upload , :url=>uploads_path do %>
-  <p><label>Email</label><%= select_tag "contacts[email]",options_for_select(@columns)  %> </p>
-  <p><label>Title</label><%= select_tag "contacts[title]", options_for_select(@columns) %> </p>
-  <p><label>Address</label><%= select_tag "contacts[address]", options_for_select(@columns) %> </p>
-  <p><label>City</label><%= select_tag "contacts[city]", options_for_select(@columns) %> </p>
-  <p><label>State</label><%= select_tag "contacts[state]", options_for_select(@columns) %> </p>
-  <p><label>zip</label><%= select_tag "contacts[zip]", options_for_select(@columns) %> </p>
-  <p><label>Country</label><%= select_tag "contacts[country]", options_for_select(@columns) %> </p>
-  <p><label>Phone</label><%= select_tag "contacts[phone]", options_for_select(@columns) %> </p>
-  <p><label>Website</label><%= select_tag "contacts[website]", options_for_select(@columns) %> </p>
-  <p><label>Company Phone</label><%= select_tag "contacts[company_phone]", options_for_select(@columns) %> </p>
-  <p><label>Company Fax</label><%= select_tag "contacts[company_fax]", options_for_select(@columns) %> </p>
-  <p><label>Company Website</label><%= select_tag "contacts[company_website]", options_for_select(@columns) %> </p>
-  <p><label>Company Revenue</label><%= select_tag "contacts[company_revenue]", options_for_select(@columns) %> </p>
-  <p><label>Company Employees</label><%= select_tag "contacts[company_employees]", options_for_select(@columns) %> </p>
-  <p><label>Company Industry</label><%= select_tag "contacts[company_industry]", options_for_select(@columns) %> </p>
-  <p><label>Company Size</label><%= select_tag "contacts[company_size]", options_for_select(@columns) %> </p>
-
+  <p><label>First Name</label><%= select_tag "contacts[first_name]",options_for_select(@columns,'first_name')  %> </p>
+  <p><label>Last Name</label><%= select_tag "contacts[last_name]",options_for_select(@columns,'last_name')  %> </p>
+  <p><label>Email</label><%= select_tag "contacts[email]",options_for_select(@columns,'email')  %> </p>
+  <p><label>Title</label><%= select_tag "contacts[title]", options_for_select(@columns,'title') %> </p>
+  <p><label>Address</label><%= select_tag "contacts[address]", options_for_select(@columns,'address') %> </p>
+  <p><label>City</label><%= select_tag "contacts[city]", options_for_select(@columns,'city') %> </p>
+  <p><label>State</label><%= select_tag "contacts[state]", options_for_select(@columns,'state') %> </p>
+  <p><label>zip</label><%= select_tag "contacts[zip]", options_for_select(@columns,'zip') %> </p>
+  <p><label>Country</label><%= select_tag "contacts[country]", options_for_select(@columns,'country') %> </p>
+  <p><label>Phone</label><%= select_tag "contacts[phone]", options_for_select(@columns,'phone') %> </p>
+  <p><label>Website</label><%= select_tag "contacts[website]", options_for_select(@columns,'website') %> </p>
+  <p><label>Company Name</label><%= select_tag "contacts[company_name]", options_for_select(@columns,'company_name') %> </p>
+  <p><label>Company Phone</label><%= select_tag "contacts[company_phone]", options_for_select(@columns,'company_phone') %> </p>
+  <p><label>Company Fax</label><%= select_tag "contacts[company_fax]", options_for_select(@columns,'company_fax') %> </p>
+  <p><label>Company Website</label><%= select_tag "contacts[company_website]", options_for_select(@columns,'company_website') %> </p>
+  <p><label>Company Revenue</label><%= select_tag "contacts[company_revenue]", options_for_select(@columns,'company_revenue') %> </p>
+  <p><label>Company Employees</label><%= select_tag "contacts[company_employees]", options_for_select(@columns,'company_employees') %> </p>
+  <p><label>Company Industry</label><%= select_tag "contacts[company_industry]", options_for_select(@columns,'company_industry') %> </p>
+  <p><label>Company Size</label><%= select_tag "contacts[company_size]", options_for_select(@columns,'company_size') %> </p>
+  
   <p><%= submit_tag "Upload Contacts" %> <%= button_to "Cancel" , :onclick=>"history:back();"%> </p>
  <% end %>
 </div>

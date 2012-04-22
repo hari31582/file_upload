@@ -11,7 +11,9 @@ class UploadsController < ApplicationController
       render :action=>:new
       return
     end
+   
     @columns = uploader.columns.map{|col| [col+" (column #{uploader.columns.index(col)+1})",col]}
+    @columns.unshift(["Select",nil])
     session[:filename] =  uploader.new_filename
 
   end
