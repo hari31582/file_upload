@@ -1,2 +1,4 @@
-Use this README file to introduce your application and point to useful places in the API for learning more.
-Run "rake doc:app" to generate API documentation for your models, controllers, helpers, and libraries.
+==Pull the code from git hub
+   1. Install pre , postgres , rails 2.3.8 , roo gem
+   2. Run  projects-  $ruby script/server
+   3. Start delated job $ rake jobs:work in another window
