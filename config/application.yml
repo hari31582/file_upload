@@ -2,3 +2,6 @@
    :extentions: 'xls xlsx csv'
    :not_supported_columns: 'id status company_id tag_id'
    
+:threads:
+   :size: 10
+   :rows_per_thread: 2

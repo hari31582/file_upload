@@ -1,8 +1,7 @@
-# To change this template, choose Tools | Templates
-# and open the template in the editor.
+
 module Threading
   class ThreadPoolContainer
-    @@threadpool = ThreadPool.new(5)
+    @@threadpool = ThreadPool.new(ApplicationConfiguration.settings[:threads][:size])
     def self.get_threaddpool
       @@threadpool  
     end

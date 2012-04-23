@@ -13,7 +13,6 @@ class FileUpload
   end
 
   def parse
-
     if  valid?
       #Save file in Temporary folder
       f = File.open("#{RAILS_ROOT}/tmp/#{@new_filename}","wb")
@@ -37,18 +36,13 @@ class FileUpload
     end
 
     #Check for size
-    
-
     if (@file.size/(1024*1024)) > 5
       @errors << "File Size is greater than 5MB"
       return false
     end
-
     #Parse file
     parse_file
 
-   
-   
     @errors.empty?
 
   end

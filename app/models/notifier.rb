@@ -5,7 +5,7 @@ class Notifier < ActionMailer::Base
     recipients 'admin@localhost'
     from       'admin@localhost'
     sent_on    Time.now
-    body       :stats => "Total #{total} rows processed , #{total-items} had an error. #{items} rows inserted"
+    body       :status => "Total #{total} rows processed , #{total-items} had an error. #{items} rows inserted"
   end
 
 end

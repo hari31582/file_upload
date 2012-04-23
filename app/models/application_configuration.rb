@@ -1,4 +1,4 @@
-# This class holds application level configurations
+# This class holds application level configurations. It will not reload in production mode
 
 require 'fileutils'
 class ApplicationConfiguration

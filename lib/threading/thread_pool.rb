@@ -7,6 +7,8 @@ module Threading
       class Worker
         def initialize
           @mutex = Mutex.new
+                    Thread.abort_on_exception=true
+
           @thread = Thread.new do
             while true
               sleep 0.001
@@ -18,6 +20,11 @@ module Threading
             end
           end
         end
+
+        def status
+          @thread.status
+        end
+
 
         def get_block
           @mutex.synchronize {@block}
@@ -53,16 +60,20 @@ module Threading
       end
 
       def busy?
-        @mutex.synchronize {@workers.any? {|w| w.busy?}}
+        @mutex.synchronize {@workers.any? {|w| 
+            w.busy?
+          }
+        }
       end
 
       def join
         sleep 0.01 while busy?
+
       end
 
       def process(&block)
         while true
-          
+            
             @mutex.synchronize do
                 worker = find_available_worker
                 if worker
