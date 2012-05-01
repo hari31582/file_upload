@@ -9,6 +9,7 @@ class FileUploadJob
   def initialize(file,mapping)
     @filename = file
     @column_mapping = mapping
+    RAILS_DEFAULT_LOGGER.debug "message"
   end
 
   def perform
@@ -37,19 +38,22 @@ class FileUploadJob
     row_size = ApplicationConfiguration.settings[:threads][:rows_per_thread]
     @processed_items=0
     @mutex = Mutex.new
+
+    time = Time.now
     if (excel.last_row - excel.first_row) > 50
       
       pool = Threading::ThreadPoolContainer.get_threaddpool
       actual_row = row = 2
       while row <= excel.last_row
        
-        pool.process {
-          
+        pool.process {    
           begin
             actual_row +=row_size
             process_row(excel,actual_row-row_size,actual_row,headers,mapping)
           rescue=>e
-            
+            RAILS_DEFAULT_LOGGER.info e.message
+            RAILS_DEFAULT_LOGGER.info e.backtrace
+            RAILS_DEFAULT_LOGGER.flush
           end
         }
         row += row_size
@@ -58,58 +62,55 @@ class FileUploadJob
     else
       process_row(excel,excel.first_row+1,excel.last_row+1,headers,mapping)
     end
-    
+    RAILS_DEFAULT_LOGGER.info "Total time for #{Time.now-time} seconds"
     send_admin_notification(@processed_items,excel.last_row-excel.first_row)
 
   end
 
   def process_row(excel,start_row ,end_row,headers,mapping)
     begin
-      @mutex.synchronize do
-        for row in start_row...end_row
-          next if row > excel.last_row
+      
+      for row in start_row...end_row
+        next if row > excel.last_row
+        company = contact = nil
+        @mutex.synchronize {
           contact = Contact.new
           company = Company.new
-          tags = []
-          for col in headers
+        }
+        tags = []
+        for col in headers    
+          db_col =  (mapping[col.downcase]||col).downcase
+          next if ApplicationConfiguration.settings[:file_upload][:not_supported_columns].split.include?(db_col.to_s)
 
-            db_col =  (mapping[col.downcase]||col).downcase
+          if contact.respond_to?(db_col.to_sym) && db_col != "tags"
 
-            next if ApplicationConfiguration.settings[:file_upload][:not_supported_columns].split.include?(db_col.to_s)
-          
-            if contact.respond_to?(db_col.to_sym) && db_col != "tags"
+            contact.send((db_col+"=").to_sym, excel.cell(row,headers.index(col)+1))
 
-              contact.send((db_col+"=").to_sym, excel.cell(row,headers.index(col)+1))
-
-            elsif db_col=="full_name"
+          elsif db_col=="full_name"
               
-              name = (excel.cell(row,headers.index(col)+1)||"").split
-              contact.first_name = name.first
-              contact.last_name = name.last
+            name = (excel.cell(row,headers.index(col)+1)||"").split
+            contact.first_name = name.first
+            contact.last_name = name.last
 
-            elsif company.respond_to?(db_col.to_sym)
-              company.send((db_col+"=").to_sym, excel.cell(row,headers.index(col)+1))
-            elsif db_col =~/company_/
-              if company.respond_to?(db_col.sub('company_','').to_sym)
-                company.send((db_col.sub('company_','')+"=").to_sym, excel.cell(row,headers.index(col)+1))
-              end
-            elsif db_col == "tags"
-              for tg in excel.cell(row,headers.index(col)+1).split(";")
-                if tag = Tag.find_by_name(tg)
-                  tags << tag
-                else
-                  tags << Tag.new(:name=>tg)
-                end
-              end
+          elsif company.respond_to?(db_col.to_sym)
+
+            company.send((db_col+"=").to_sym, excel.cell(row,headers.index(col)+1))
+
+          elsif db_col =~/company_/
+
+            if company.respond_to?(db_col.sub('company_','').to_sym)
+              company.send((db_col.sub('company_','')+"=").to_sym, excel.cell(row,headers.index(col)+1))
             end
-          end
-          #Save company first
-          if company.valid?
-            company.save
-          else
-            company = Company.find_by_name(company.name)
-          end
 
+          elsif db_col == "tags"
+
+            tags = excel.cell(row,headers.index(col)+1).split(",").select{|tg| tg unless tg.blank?}
+
+          end
+        end
+
+        @mutex.synchronize{
+          company = company.valid? ? company.save : Company.find_by_name(company.name)
           contact.company_id  = company.id
           
           # if contact name us empty
@@ -130,24 +131,25 @@ class FileUploadJob
 
           unless contact.new_record?
             for tg in tags
-              if tg.new_record?
-                tg.save
-              end
-              ContactsTag.create({:tag_id=>tg.id,:contact_id=>contact.id})
+              ContactsTag.create({:tag_id=>Tag.find_or_create_by_name(tg).id,:contact_id=>contact.id})
             end
             @processed_items += 1
           end
-
-        end
+        }
+          
       end
+      
     rescue=>e
-      #puts e
-      #puts e.backtrace
+      RAILS_DEFAULT_LOGGER.info e
+      RAILS_DEFAULT_LOGGER.info e.backtrace
+      RAILS_DEFAULT_LOGGER.flush
     end
-    
+    return
   end
 
   def send_admin_notification(succedded,total)
+    RAILS_DEFAULT_LOGGER.info "#{succedded} Inserted from total #{total}"
+    RAILS_DEFAULT_LOGGER.flush
     Notifier.deliver_upload_status(succedded,total)
   end
 
