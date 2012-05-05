@@ -32,7 +32,7 @@ class FileUploadJob
     excel.default_sheet = excel.sheets.first
     headers = []
     for cell_num in excel.first_column..excel.last_column
-      headers << excel.cell(excel.first_row,cell_num)
+      headers << excel.cell(excel.first_row,cell_num).to_utf_eight
     end
     mapping =  @column_mapping.invert
     row_size = ApplicationConfiguration.settings[:threads][:rows_per_thread]
@@ -51,9 +51,9 @@ class FileUploadJob
             actual_row +=row_size
             process_row(excel,actual_row-row_size,actual_row,headers,mapping)
           rescue=>e
-            RAILS_DEFAULT_LOGGER.info e.message
-            RAILS_DEFAULT_LOGGER.info e.backtrace
-            RAILS_DEFAULT_LOGGER.flush
+            logger.info e.message
+            logger.info e.backtrace
+            logger.flush
           end
         }
         row += row_size
@@ -62,7 +62,8 @@ class FileUploadJob
     else
       process_row(excel,excel.first_row+1,excel.last_row+1,headers,mapping)
     end
-    RAILS_DEFAULT_LOGGER.info "Total time for #{Time.now-time} seconds"
+    logger.info "Total time for #{Time.now-time} seconds"
+    puts "Total time for #{Time.now-time} seconds"
     send_admin_notification(@processed_items,excel.last_row-excel.first_row)
 
   end
@@ -81,35 +82,40 @@ class FileUploadJob
         for col in headers    
           db_col =  (mapping[col.downcase]||col).downcase
           next if ApplicationConfiguration.settings[:file_upload][:not_supported_columns].split.include?(db_col.to_s)
-
+           val = excel.cell(row,headers.index(col)+1)
+           if val.kind_of?(String)
+             val = val.to_utf_eight
+           end
           if contact.respond_to?(db_col.to_sym) && db_col != "tags"
-
-            contact.send((db_col+"=").to_sym, excel.cell(row,headers.index(col)+1))
-
+            contact.send((db_col+"=").to_sym,val)
           elsif db_col=="full_name"
               
-            name = (excel.cell(row,headers.index(col)+1)||"").split
+            name = (val||"").split
             contact.first_name = name.first
             contact.last_name = name.last
 
           elsif company.respond_to?(db_col.to_sym)
 
-            company.send((db_col+"=").to_sym, excel.cell(row,headers.index(col)+1))
+            company.send((db_col+"=").to_sym, val)
 
           elsif db_col =~/company_/
 
             if company.respond_to?(db_col.sub('company_','').to_sym)
-              company.send((db_col.sub('company_','')+"=").to_sym, excel.cell(row,headers.index(col)+1))
+              company.send((db_col.sub('company_','')+"=").to_sym, val)
             end
 
           elsif db_col == "tags"
-
-            tags = excel.cell(row,headers.index(col)+1).split(",").select{|tg| tg unless tg.blank?}
+            
+            tags = val.split(/;|:|\|/).select{|tg| tg unless tg.blank?}
 
           end
         end
 
         @mutex.synchronize{
+          if company.name.blank? && !contact.email.blank?
+            company.name = contact.email.split('@').last.split(".").first
+          end
+
           company = company.valid? ? company.save : Company.find_by_name(company.name)
           contact.company_id  = company.id
           
@@ -140,17 +146,24 @@ class FileUploadJob
       end
       
     rescue=>e
-      RAILS_DEFAULT_LOGGER.info e
-      RAILS_DEFAULT_LOGGER.info e.backtrace
-      RAILS_DEFAULT_LOGGER.flush
+      puts e
+      puts e.backtrace
+      logger.info e
+      logger.info e.backtrace
+      logger.flush
     end
     return
   end
 
   def send_admin_notification(succedded,total)
-    RAILS_DEFAULT_LOGGER.info "#{succedded} Inserted from total #{total}"
-    RAILS_DEFAULT_LOGGER.flush
+    logger.info "#{succedded} Inserted from total #{total}"
+    logger.flush
     Notifier.deliver_upload_status(succedded,total)
+  end
+
+
+  def logger
+    RAILS_DEFAULT_LOGGER
   end
 
 end
