@@ -4,6 +4,7 @@ gem "rails", "=2.3.8"
 gem "pg","=0.13.2"
 gem "postgres","=0.8.1"
 gem "roo","=1.10.1"
+gem "chardet","=0.9.0"
 
 platforms :jruby do
   
